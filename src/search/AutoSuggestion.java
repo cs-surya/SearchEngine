@@ -13,14 +13,14 @@ public class AutoSuggestion {
   public static String readFileAsString(String fileName)throws Exception
   {
     String strData = "";
-    String strFileName = "ConvertedText\\" + fileName;
+    String strFileName = "Textfiles\\" + fileName;
     strData = new String(Files.readAllBytes(Paths.get(strFileName)));
     return strData;
   }
 	
   public static ArrayList<String> startSuggestion(String word)throws Exception
   {
-	  File wholeFolder = new File("ConvertedText");
+	  File wholeFolder = new File("Textfiles");
 	  File[] List_Of_Files = wholeFolder.listFiles();
       List<String> listStrings = new ArrayList<>();
       TST<Integer> objTST = new TST<Integer>();

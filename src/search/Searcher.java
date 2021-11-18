@@ -1,7 +1,5 @@
 package search;
 
-import Utils.Sequences;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -137,58 +135,39 @@ public class Searcher {
 //		spellCheck spellCheck = new spellCheck();
 		File wholeFolder = new File("Textfiles");
 	    File[] List_Of_Files = wholeFolder.listFiles();
-	    Scanner s = new Scanner(System.in);
 
 	    for (int i = 0; i < List_Of_Files.length; i++) {
 			srch.indexFile(List_Of_Files[i]);
 	    }
-	    int check =1;
-	    while(check==1) {
-	    	System.out.println("Enter the word you want to search");
-	    	Scanner sc = new Scanner(System.in);
-	    	String str = sc.nextLine();
-	    	sc.close();
 	    
-	    	String[] al = str.split(" ");
-	    	Set<String> answer = new HashSet<String>();
-	    	answer = srch.search(Arrays.asList(al));
+	    
+    	System.out.println("Enter the word you want to search");
+    	Scanner sc = new Scanner(System.in);
+    	String str = sc.nextLine();
+    	sc.close();
+    
+    	String[] al = str.split(" ");
+    	Set<String> answer = new HashSet<String>();
+    	answer = srch.search(Arrays.asList(al));
 
-	    	if(answer.size() > 0)
-	    	{
-	    		for (String last : answer) {
-					System.out.print(last.substring(0,last.length())+"\n" );
-	    		}
-	    	}
+    	if(answer.size() > 0)
+    	{
+    		for (String last : answer) {
+				System.out.print(last.substring(0,last.length())+"\n" );
+    		}
+    	}
 
-	    	else {
-				System.out.println("Results not Found for : " + str);
-//				spellCheck.check(str);
-			}
-	    	try {
-				AutoSuggestion.startSuggestion(str);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	    	
-	    	
-	    	System.out.println("\nType 1 to search for another word or Type 0 to exit");
-	    	
-	    	while(!s.hasNextInt())
-	    	{
-	    		System.out.println("Try again!! Type 1 to search for another word or Type 0 to exit");
-	    		s.next();
-	    	}	    	
-	    	check = s.nextInt();
-	    	if (check == 0) {
-	    		System.out.println("Hope to see you soon. Good Bye!!");
-	    		break;
-	    	}
-	       	else {
-	    		str = s.nextLine();	
-	    	}
-	    }
-    	s.close();
+    	else {
+			System.out.println("Results not Found for : " + str);
+//			spellCheck.check(str);
+		}
+    	try {
+			AutoSuggestion.startSuggestion(str);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
 	}
 	
 	public class Tuple {

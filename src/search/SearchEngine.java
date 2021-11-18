@@ -19,13 +19,15 @@ public class SearchEngine {
 				url = Constants.CRAWLER_DEFAULT_URL;
 			}
 			
-			sc.close();
+			
 			
 			System.out.println("Crawling the url. Please wait...");
 			Crawler.crawl(url);
 			System.out.println("Crawling done");
 			
 			Searcher.start();
+			
+			sc.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
