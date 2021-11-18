@@ -13,7 +13,7 @@ public class AutoSuggestion {
   public static String readFileAsString(String fileName)throws Exception
   {
     String strData = "";
-    String strFileName = "Textfiles\\" + fileName;
+    String strFileName = "Textfiles/" + fileName;
     strData = new String(Files.readAllBytes(Paths.get(strFileName)));
     return strData;
   }
