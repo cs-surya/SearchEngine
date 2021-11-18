@@ -27,6 +27,10 @@ public class SearchEngine {
 			
 			Searcher.start();
 			
+			System.out.println("*******************************************");
+			System.out.println("\tBye");
+			System.out.println("*******************************************");
+			
 			sc.close();
 		} catch(Exception e) {
 			e.printStackTrace();

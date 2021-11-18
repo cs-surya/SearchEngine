@@ -140,34 +140,42 @@ public class Searcher {
 			srch.indexFile(List_Of_Files[i]);
 	    }
 	    
+	    while(true) {
+	    	System.out.println("Enter the word you want to search");
+	    	Scanner sc = new Scanner(System.in);
+	    	String str = sc.nextLine();
 	    
-    	System.out.println("Enter the word you want to search");
-    	Scanner sc = new Scanner(System.in);
-    	String str = sc.nextLine();
-    	sc.close();
-    
-    	String[] al = str.split(" ");
-    	Set<String> answer = new HashSet<String>();
-    	answer = srch.search(Arrays.asList(al));
+	    	String[] al = str.split(" ");
+	    	Set<String> answer = new HashSet<String>();
+	    	answer = srch.search(Arrays.asList(al));
 
-    	if(answer.size() > 0)
-    	{
-    		for (String last : answer) {
-				System.out.print(last.substring(0,last.length())+"\n" );
-    		}
-    	}
+	    	if(answer.size() > 0)
+	    	{
+	    		for (String last : answer) {
+					System.out.print(last.substring(0,last.length())+"\n" );
+	    		}
+	    	}
 
-    	else {
-			System.out.println("Results not Found for : " + str);
-//			spellCheck.check(str);
-		}
-    	try {
-			AutoSuggestion.startSuggestion(str);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	
+	    	else {
+				System.out.println("Results not Found for : " + str);
+//				spellCheck.check(str);
+			}
+	    	try {
+				 ArrayList<String> autoSuggestedWords = AutoSuggestion.startSuggestion(str);
+				 System.out.println("\nYou can try searching for these words too:");
+				 System.out.println(autoSuggestedWords.toString());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	    	
+	    	System.out.println("\nDo you want to search again(Y/N)");
+	    	String ans = sc.nextLine();
+
+	    	if(answer == null || !ans.equalsIgnoreCase("y")) {
+	    		break;
+	    	}
+	    }
+	    //sc.close();
 	}
 	
 	public class Tuple {
