@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="google glue-flexbox spa" locale="root" user-region="north-america" path="/stories/soundingthealarm/"> 
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width"> 
+  <title>How engineers build tools to share information in an emergency - Google</title> 
+  <meta name="description" content="Inside Google: How the Crisis Response team is building tools to alert users with accurate information during emergency situations"> 
+  <script type="text/javascript" nonce="LeX9v_16Nmfxs7xZspfXiw">
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+   'gtm.blacklist':['customScripts','nonGoogleScripts','nonGooglePixels','customPixels']
+},{
+   'locale_fallback': (document.childNodes[1].attributes.locale || {}).value
+});
+</script> <!-- Google Tag Manager --> 
+  <script nonce="LeX9v_16Nmfxs7xZspfXiw">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQZB4J');</script> <!-- End Google Tag Manager --> 
+  <script nonce="LeX9v_16Nmfxs7xZspfXiw">
+window.dataLayer.push({
+    event: 'coinToss5050',
+    action: Math.random() > .5 ? 'group1': 'group2'
+});
+</script> 
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500,700,900|Google+Sans+Display:400,500" rel="stylesheet" nonce="LeX9v_16Nmfxs7xZspfXiw"> 
+  <link href="/assets-stories-2019-custom/css/main.min.css?cache=662c864" rel="stylesheet" nonce="LeX9v_16Nmfxs7xZspfXiw"> 
+  <meta property="og:description" content="Inside Google: How the Crisis Response team is building tools to alert users with accurate information during emergency situations"> 
+  <meta property="og:title" content="How engineers build tools to share information in an emergency - Google"> 
+  <meta property="og:image" content=""> 
+  <meta property="og:image:width" content=""> 
+  <meta property="og:image:height" content=""> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="//www.google.com/stories/soundingthealarm/"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@google"> 
+  <meta name="twitter:title" content="How engineers build tools to share information in an emergency - Google"> 
+  <meta name="twitter:description" content="How engineers build tools to share information in an emergency"> 
+  <meta name="twitter:image" content=""> 
+  <meta property="google:search-sre-monitor" content="ALL_ALL"> 
+  <link rel="apple-touch-icon" href="https://www.gstatic.com/images/branding/googleg/2x/googleg_standard_color_120dp.png"> 
+  <link rel="apple-touch-icon-precomposed" href="https://www.gstatic.com/images/branding/googleg/2x/googleg_standard_color_120dp.png"> 
+  <link rel="canonical" href="https://about.google/stories/soundingthealarm/"> 
+  <script nonce="LeX9v_16Nmfxs7xZspfXiw">
+(function(){document.documentElement.classList.remove("google");document.documentElement.classList.add("google-js");}).call(window)      </script> 
+ </head> 
+ <body no-scroll> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQZB4J" height="0" width="0&quot;" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <header class="header" data-about-nav data-ng-class="{'header--dark-bg': navCtrl.navIsDark, 'header--custom-color': navCtrl.navCustomColor, 'header--inactive': navCtrl.navIsFixed}"> 
+   <div class="header-inner"> 
+    <div class="product-logo"> <a href="#content" aria-label="Jump to content" class="glue-header__link glue-header__skip-content"> <p class="glue-header__skip-content-text">Jump to content</p> </a> <a href="../../" target="_self" aria-label="Google" data-g-nav-link data-g-category="site navigation" data-g-action="google logo" data-g-label="header"> 
+      <svg alt="Google" class="logo-svg " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 86 28"> <path fill="#4285F4" d="M10.4,21C4.7,21,0,16.2,0,10.5S4.7,0,10.4,0c3.1,0,5.3,1.3,7,2.9l-1.9,2c-1.2-1.2-2.8-2-5-2
+      c-4.1,0-7.3,3.4-7.3,7.6s3.2,7.6,7.3,7.6c2.7,0,4.2-1.1,5.1-2.1c0.8-0.8,1.3-2,1.5-3.8h-6.6V9.3h9.3c0.1,0.5,0.2,1.1,0.2,1.8
+      c0,2.2-0.5,5-2.4,6.9C15.7,20,13.4,21,10.4,21z" /> <path fill="#EA4335" d="M34.2,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S34.2,10.2,34.2,14.1z M31.4,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C29.6,18.2,31.4,16.5,31.4,14.1z" /> <path fill="#FBBC03" d="M48.4,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S48.4,10.2,48.4,14.1z M45.5,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C43.8,18.2,45.5,16.5,45.5,14.1z" /> <path fill="#4285F4" d="M61.7,7.8V20c0,5-2.7,7-6.1,7c-3.2,0-5-2.2-5.8-4l2.5-1.1c0.4,1.1,1.5,2.4,3.3,2.4c2.1,0,3.4-1.4,3.4-3.9v-1
+      h-0.1c-0.6,0.8-1.8,1.6-3.4,1.6c-3.3,0-6.2-2.9-6.2-6.8s2.9-6.7,6.2-6.7c1.6,0,2.7,0.7,3.4,1.6h0.1V7.8H61.7z M59.2,14.1
+      c0-2.4-1.5-4.1-3.5-4.1c-1.9,0-3.5,1.7-3.5,4.1s1.5,4.1,3.5,4.1C57.7,18.2,59.2,16.5,59.2,14.1z" /> <path fill="#34A853" d="M66.4,1.1v19.8h-2.8V1.1H66.4z" /> <path fill="#EA4335" d="M77.7,16.3l2.2,1.6c-0.7,1.1-2.5,3-5.5,3c-3.7,0-6.5-2.9-6.5-6.7c0-4,2.8-6.7,6.2-6.7c3.4,0,5,2.8,5.6,4.3
+      l0.3,0.7l-8.8,3.7c0.7,1.4,1.7,2,3.2,2S76.9,17.5,77.7,16.3z M70.8,14l5.8-2.5c-0.4-0.8-1.3-1.5-2.4-1.5C72.7,10,70.7,11.3,70.8,14
+      z" /> 
+      </svg> </a> 
+    </div> <button class="nav-toggle-button outside" data-about-nav-toggle aria-label="Navigation menu toggle" data-g-category="header" data-g-action="navigation" data-g-label="Navigation menu toggle" data-g-module-type="Main Nav"> 
+     <svg alt="Open navigation menu" class="menu-bars" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24"> <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /> 
+     </svg> <img alt="Open navigation menu" class="menu-bars" src="/assets-stories-2019-custom/img/menu.png?cache=38c6aed" height="24" width="24"> 
+     <svg alt="Close navigation menu" class="menu-close" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24"> <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /> 
+     </svg> <img alt="Close navigation menu" class="menu-close" src="/assets-stories-2019-custom/img/close.png?cache=5628868" height="24" width="24"> </button> 
+    <nav class="top-nav"> 
+     <div class="product-logo"> <a href="../../" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="google logo" data-g-label="header"> 
+       <svg alt="Google" class="logo-svg " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 86 28"> <path fill="#4285F4" d="M10.4,21C4.7,21,0,16.2,0,10.5S4.7,0,10.4,0c3.1,0,5.3,1.3,7,2.9l-1.9,2c-1.2-1.2-2.8-2-5-2
+      c-4.1,0-7.3,3.4-7.3,7.6s3.2,7.6,7.3,7.6c2.7,0,4.2-1.1,5.1-2.1c0.8-0.8,1.3-2,1.5-3.8h-6.6V9.3h9.3c0.1,0.5,0.2,1.1,0.2,1.8
+      c0,2.2-0.5,5-2.4,6.9C15.7,20,13.4,21,10.4,21z" /> <path fill="#EA4335" d="M34.2,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S34.2,10.2,34.2,14.1z M31.4,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C29.6,18.2,31.4,16.5,31.4,14.1z" /> <path fill="#FBBC03" d="M48.4,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S48.4,10.2,48.4,14.1z M45.5,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C43.8,18.2,45.5,16.5,45.5,14.1z" /> <path fill="#4285F4" d="M61.7,7.8V20c0,5-2.7,7-6.1,7c-3.2,0-5-2.2-5.8-4l2.5-1.1c0.4,1.1,1.5,2.4,3.3,2.4c2.1,0,3.4-1.4,3.4-3.9v-1
+      h-0.1c-0.6,0.8-1.8,1.6-3.4,1.6c-3.3,0-6.2-2.9-6.2-6.8s2.9-6.7,6.2-6.7c1.6,0,2.7,0.7,3.4,1.6h0.1V7.8H61.7z M59.2,14.1
+      c0-2.4-1.5-4.1-3.5-4.1c-1.9,0-3.5,1.7-3.5,4.1s1.5,4.1,3.5,4.1C57.7,18.2,59.2,16.5,59.2,14.1z" /> <path fill="#34A853" d="M66.4,1.1v19.8h-2.8V1.1H66.4z" /> <path fill="#EA4335" d="M77.7,16.3l2.2,1.6c-0.7,1.1-2.5,3-5.5,3c-3.7,0-6.5-2.9-6.5-6.7c0-4,2.8-6.7,6.2-6.7c3.4,0,5,2.8,5.6,4.3
+      l0.3,0.7l-8.8,3.7c0.7,1.4,1.7,2,3.2,2S76.9,17.5,77.7,16.3z M70.8,14l5.8-2.5c-0.4-0.8-1.3-1.5-2.4-1.5C72.7,10,70.7,11.3,70.8,14
+      z" /> 
+       </svg> </a> 
+     </div> 
+     <ul role="tablist"> 
+      <li class="_-home" role="tab" id="tab-1" tabindex="0"> <a href="../../" title="About" target="_self" tabindex="-1" data-g-nav-link data-g-category="site navigation" data-g-action="home" data-g-label="header"> About </a> </li> 
+      <li class="_-products" role="tab" id="tab-2" tabindex="0"> <a href="../../products/" title="Products" target="_self" tabindex="-1" data-g-nav-link data-g-category="site navigation" data-g-action="products" data-g-label="header"> Products </a> </li> 
+      <li class="_-commitments" role="tab" id="tab-3" tabindex="0"> <a href="../../commitments/" title="Commitments" target="_self" tabindex="-1" data-g-nav-link data-g-category="site navigation" data-g-action="commitments" data-g-label="header"> Commitments </a> </li> 
+      <li class="selected-page _-stories" role="tab" id="tab-4" tabindex="0"> <a href="../../stories/" title="Stories" target="_self" tabindex="-1" data-g-nav-link data-g-category="site navigation" data-g-action="stories" data-g-label="header"> Stories </a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <main class="static-content-view" id="content" data-ui-view="main"> 
+   <div class="story t-standard _-story-crisis-response" data-track-page-load data-track-page-load_read-time="420" data-track-page-load_topic="crisis-response" data-track-page-load_subtopic-1="google-org" data-track-page-load_subtopic-2="ai" data-track-page-load_subtopic-3="sustainability" data-track-page-load_subtopic-4="india" data-track-page-load_subtopic-5="asia-and-pacific"> 
+    <section class="story__wrapper"> 
+     <div class="story__main" data-ng-cloak=""> 
+      <div class="story__content" data-target-blank> 
+       <link rel="preload" as="video" href="https://kstatic.googleusercontent.com/files/6fb60bb09cfd190357f15770d4df50c2aecb88c9d34427effb4ab1441712640ac06dd56be00f8de9e9be65a12d7536c03483085c7c40e93ed16f08924c776532" nonce="LeX9v_16Nmfxs7xZspfXiw"> 
+       <link rel="preload" as="video" href="https://kstatic.googleusercontent.com/files/30a59e45f3bcd8e17815062a3c004c2597b9cac5ae1c976abad61d4303c6b1a7108f88a0a4b5838666be264b71e119aba8ecc43ecd38048e86316fa4c6534542" nonce="LeX9v_16Nmfxs7xZspfXiw"> 
+       <div data-ambient-video class="story-grid__row story-ambient-video
+    story-grid__padding-none
+    _-story-crisis-response-hero"> 
+        <div class="story-grid__col-width-full-width
+      story-grid__size
+      story-grid__size-fixed-height" style="height:px;"> 
+         <div class="story-ambient-video__wrapper"> 
+          <video class="js-story-ambient-video__video story-ambient-video__video" aria-label="Aerial photo of boat crew on a river in India" loop muted playsinline preload="auto" poster="https://lh3.googleusercontent.com/S84f9s2n44Q0ePxmcam1to4kVoTdBCfKYp4SIqefvE4Crp3vNWgWhkYZTj2ENty8hFDUQYguETgzffgZamowyyFUXN-5wYTpqQCx=l80-sg-rj-s1440"> 
+           <source src="https://kstatic.googleusercontent.com/files/6fb60bb09cfd190357f15770d4df50c2aecb88c9d34427effb4ab1441712640ac06dd56be00f8de9e9be65a12d7536c03483085c7c40e93ed16f08924c776532" type="video/webm"> 
+           <source src="https://kstatic.googleusercontent.com/files/30a59e45f3bcd8e17815062a3c004c2597b9cac5ae1c976abad61d4303c6b1a7108f88a0a4b5838666be264b71e119aba8ecc43ecd38048e86316fa4c6534542" type="video/mp4"> 
+          </video> 
+          <div class="story-ambient-video__content
+              story-ambient-video__content--horizontal-center
+              story-ambient-video__content--vertical-bottom" data-unite-orphan unite-child-orphans> 
+           <h1>Sounding the Alarm</h1> 
+           <h3>Better alerts can save lives in an emergency. Google Crisis Response is using AI to help.</h3> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div data-ambient-video class="story-crisis-response-intro-scroll-reveal story-ambient-video story-grid__row"> 
+        <div class="story-ambient-video__wrapper"> 
+         <video class="js-story-ambient-video__video story-ambient-video__video" muted playsinline loop autoplay preload="auto" poster="https://lh3.googleusercontent.com/cnQw56NnFuIe3pitJahsCyfMqaS3v_ivaQQNMj-fE-OU9l503MVg7wP7P-dtMmJ1i396FimtGokjcLA2jThhxFtpPF3i9v1M7F592w=l80-sg-rj-s1440"> 
+          <source src="https://kstatic.googleusercontent.com/files/d332c7ca611f3154e84bb8f41ccf9c808515315a25a121473d9fd41f6ada0e22aa3c4b9173e02163533da27a84d72a7f6bdfcfa7cb5d3c2bbf899bd449590a70" type="video/webm"> 
+          <source src="https://kstatic.googleusercontent.com/files/8d490ac37d417847fdff4f750ee1dfca22e500d153e9e3db185c83048fbd27168d0ac4c9f59e1a5361b1d5e518e5668cd18d27ac7b175ffc81153b8f937dd753" type="video/mp4"> 
+         </video> 
+        </div> 
+        <div class="shadow-mask"></div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-intro
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>Two weeks before Hurricane Florence made landfall on the North Carolina coast this September, it was forming in the Atlantic Ocean. Florence would turn out to be an unusually slow-moving hurricane, one capable of dropping record rainfall into areas prone to flooding. This unexpected delay in the hurricane’s arrival meant that people had more time to prepare for the storm.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__quote-component
+    story-grid__padding-x-large
+    story__quote-align-center
+    _-story-crisis-response-quote-intro"> 
+        <div class="story-grid__col-width-small"> 
+         <blockquote class="story__quote-quote
+story__quote-quote-small"> 
+          <p>“This was a well-forecasted event several days in advance for such a complicated system”</p> 
+         </blockquote> 
+         <p class="story__quote-attribution"> <span class="story__quote-name">Sara Jamison,</span> a Senior Service Hydrologist with the National Weather Service </p> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-intro-2
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>Because of that, people were notified of the conditions, evacuations began, and disaster alerts were disseminated. But that doesn’t mean that everyone got out of the hurricane’s path.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story-grid__padding-medium
+
+    story__image-block-component _-story-crisis-response-image-portrait" style=""> 
+        <div class="story-grid__col-width-large
+      story-grid__col-align-center"> 
+         <figure class="story-figure__figure "> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> 
+           <source srcset="https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w1440-l80-sg-rj-c0xffffff, https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w2880-l80-sg-rj-c0xffffff 2x" media="(min-width: 1024px)"> 
+           <source srcset="https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w1024-l80-sg-rj-c0xffffff, https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w2048-l80-sg-rj-c0xffffff 2x" media="(min-width: 600px)"> 
+           <source srcset="https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w600-l80-sg-rj-c0xffffff, https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w1200-l80-sg-rj-c0xffffff 2x"> <!--[if IE 9]></video><![endif]--> 
+           <img src="https://lh3.googleusercontent.com/K9JCBQHvDxHMEdOq277jo1Vztp-rc5OC760HS-f37xr240ZPJWnWxmCl6W0x0ywmxeb6itZAcUmRBno6BVLeR_YJvR-iMIOtNnMmqCY=w600-l80-sg-rj-c0xffffff" class="story-figure__image-proportionately" alt="Mor Schlesinger portrait"> 
+          </picture> 
+         </figure> 
+        </div> 
+        <div class="story-grid__row
+    story-grid__row-align-center
+    story-grid__padding-medium
+    story__caption-component _-story-crisis-response-image-portrait"> 
+         <div class="story__caption
+      story-grid__col-width-large
+      story__caption--align-left"> 
+          <p>Mor Schlesinger, Manager of Software Engineering for Crisis Response</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-first-alert
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>In response to emergency scenarios like the one presented by Hurricane Florence, people often turn to Google, looking for answers. “Our mission is to organize the world’s information to make it universally accessible,” says Mor Schlesinger, manager of software and engineering at Google. “The times when people need this information the most is in times of crisis.” </p> 
+          <p>In 2010, a fire broke out in Israel’s Carmel Mountains. Yossi Matias, VP Engineering at Google and Head of Israel R&amp;D Center, could see the fire from an office window but couldn’t find any helpful information about it online. So they shifted gears and got to work on a way to change that. In a matter of a few hours, the small team coordinated with the local government, surfaced the relevant emergency resources, and made them available through Google Search. </p> 
+          <p>That experience of creating the first alert crystallized the fact that there was a need to organize information in emergency scenarios.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__quote-component
+    story-grid__padding-x-large
+    story__quote-align-center
+    _-story-crisis-response-mor-quote"> 
+        <div class="story-grid__col-width-small"> 
+         <blockquote class="story__quote-quote
+story__quote-quote-small"> 
+          <p>In situations of crisis, people are anxiously looking for information that can help them make decisions about how to stay safe,” says Matias, “and we have an opportunity to make that information available to people in those dire moments.</p> 
+         </blockquote> 
+         <p class="story__quote-attribution"> <span class="story__quote-name">Yossi Matias,</span> VP Engineering at Google and Head of Israel R&amp;D Center. </p> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-phone-unit
+    story-crisis-response-phone-unit-personfinder
+    story-grid__padding-x-large
+    story-grid__row"> 
+        <div class="story-grid__col-width-large wrapper"> 
+         <div class="col-image"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> 
+           <source srcset="https://lh3.googleusercontent.com/tHmTletVAaxm_2RmHTgKVvExRi8dXYFAMbIm33pEXq8HdeKk84CwO4X3sJcKz0YEhkCCjH0sBLPxu9DGVx6Vt2Jeg40g15D9BZXXFQ=w720, https://lh3.googleusercontent.com/tHmTletVAaxm_2RmHTgKVvExRi8dXYFAMbIm33pEXq8HdeKk84CwO4X3sJcKz0YEhkCCjH0sBLPxu9DGVx6Vt2Jeg40g15D9BZXXFQ=w1440 2x"> <!--[if IE 9]></video><![endif]--> 
+           <img src="https://lh3.googleusercontent.com/tHmTletVAaxm_2RmHTgKVvExRi8dXYFAMbIm33pEXq8HdeKk84CwO4X3sJcKz0YEhkCCjH0sBLPxu9DGVx6Vt2Jeg40g15D9BZXXFQ=w720" class="" alt="Phone with Person Finder feature for use after an earthquake in Japan"> 
+          </picture> 
+         </div> 
+         <div class="col-copy"> 
+          <h2 class="title">Person Finder</h2> 
+          <div class="body">
+            Person Finder helps facilitate shared missing persons information to help keep people up-to-date on safety status after a crisis. It was activated for the first time after the January 2010 earthquake in Haiti. 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-phone-unit
+    story-crisis-response-phone-unit-sosalert
+    story-grid__padding-x-large
+    story-grid__row"> 
+        <div class="story-grid__col-width-large wrapper"> 
+         <div class="col-image"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> 
+           <source srcset="https://lh3.googleusercontent.com/oB8odj4x0cSlyOg5n_QzplR4EPQ2Mk76bSsy-864SHfYt4oq_E1KVT4FbMOsyxGncbk02fRj7LqD5oZKnshWzOcSnQTaux9gJdg=w720, https://lh3.googleusercontent.com/oB8odj4x0cSlyOg5n_QzplR4EPQ2Mk76bSsy-864SHfYt4oq_E1KVT4FbMOsyxGncbk02fRj7LqD5oZKnshWzOcSnQTaux9gJdg=w1440 2x"> <!--[if IE 9]></video><![endif]--> 
+           <img src="https://lh3.googleusercontent.com/oB8odj4x0cSlyOg5n_QzplR4EPQ2Mk76bSsy-864SHfYt4oq_E1KVT4FbMOsyxGncbk02fRj7LqD5oZKnshWzOcSnQTaux9gJdg=w720" class="" alt="Phone with SOS Alert feature displaying wildfire information"> 
+          </picture> 
+         </div> 
+         <div class="col-copy"> 
+          <h2 class="title">SOS Alert</h2> 
+          <div class="body">
+            SOS Alerts, a tool for during and after an event, brings together data from Maps, and other sources in Search. The array of tools for emergency events offers resources during and after a wide range of disaster scenarios, including natural disasters such as hurricanes, floods, and earthquakes. 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-phone-unit
+    story-crisis-response-phone-unit-publicalerts
+    story-grid__padding-x-large
+    story-grid__row"> 
+        <div class="story-grid__col-width-large wrapper"> 
+         <div class="col-image"> <picture> <!--[if IE 9]><video style="display: none;"><![endif]--> 
+           <source srcset="https://lh3.googleusercontent.com/FbnIxvXlkRg24osiDOcdX1UQvYi_lBjkbN18UIMwIqm-DY_4AZvqvc7Ah6uPYPq6H4lARNHInxRmuyt4euUZKc42zfPJyjGErr7XRg=w720, https://lh3.googleusercontent.com/FbnIxvXlkRg24osiDOcdX1UQvYi_lBjkbN18UIMwIqm-DY_4AZvqvc7Ah6uPYPq6H4lARNHInxRmuyt4euUZKc42zfPJyjGErr7XRg=w1440 2x"> <!--[if IE 9]></video><![endif]--> 
+           <img src="https://lh3.googleusercontent.com/FbnIxvXlkRg24osiDOcdX1UQvYi_lBjkbN18UIMwIqm-DY_4AZvqvc7Ah6uPYPq6H4lARNHInxRmuyt4euUZKc42zfPJyjGErr7XRg=w720" class="" alt="Phone with Public Alerts feature displaying winter storm information"> 
+          </picture> 
+         </div> 
+         <div class="col-copy"> 
+          <h2 class="title">Public Alerts</h2> 
+          <div class="body">
+            Public Alerts serves as a type of online Emergency Broadcasting System, gathering data and pushing that emergency content to Maps, Search, and elsewhere. Currently, Crisis Response implements Public Alerts in 12 countries, with plans to expand. 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-full-bleed-quote
+    story-crisis-response-full-bleed-quote-mor
+    story-grid__row"> 
+        <style>
+
+
+
+
+
+      @media screen  {
+ .story-figure__image-bg607f34b {
+          background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w600-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen  and (min-resolution: 192dpi) {
+ .story-figure__image-bg607f34b {
+            background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w1200-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 600px) {
+ .story-figure__image-bg607f34b {
+          background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w1024-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 600px) and (min-resolution: 192dpi) {
+ .story-figure__image-bg607f34b {
+            background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w2048-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 1024px) {
+ .story-figure__image-bg607f34b {
+          background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w1440-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+ .story-figure__image-bg607f34b {
+            background-image: url(https://lh3.googleusercontent.com/l9vYUrAGLOqnz7b9m4aZl9L4a0b60k_2h3NgEXyikqD2Ty9kIuhkNi7pPPKbox-xRsrQkexxm1v2YRAWFScid19Ok6f2z9cdABTd1w=w2880-l80-sg-rj-c0xffffff);
+          }
+        }
+
+  </style> 
+        <div class="title story-grid__col-width-small"> <q>In the midst of a horrible event, it’s a huge relief to find out at least you can know what is going on. What scares us the most is when we don’t have enough information.</q> 
+         <p>Mor Schlesinger, Manager of Software Engineering for Crisis Response.</p> 
+        </div> 
+        <div class="story-figure__image-bg
+      story-figure__image-bg607f34b" role="img" aria-label="Mor Schlesinger portrait"> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-stats
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>Crisis Response at Google existed in various forms over the past decade and now has a permanent presence led by Yossi Matias with multiple teams around the world. Since the launch of SOS Alerts in fall 2017, the tools built by the Crisis Response team have been activated during more than 200 crises around the world, and the information provided by SOS Alerts and Public Alerts has been viewed more than 1.5 billion times. The drive for that expansion arises from the mission felt by the team. “Part of our paying it forward is to try and tackle these problems,” says Schlesinger, who came on board to lead engineering efforts for the team. “We’re doing this because we feel this is the right thing to do.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-maps
+      story-grid__padding-medium"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>In the United States, during a storm like Florence, which impacted the many rivers that meet the shoreline along the North and South Carolina coasts, Jamison says, “trying to predict things, especially in the situation of a hurricane, can be extremely complex.” </p> 
+          <p>In these cases, what the team can offer is mapping data – layers highlighting the path of a storm, evacuation routes within states or across state lines, shelter locations – as well as alerts. Partnerships with state and local governments make it possible to overlay information about road and bridge closures across state lines. Getting accurate information to people as soon as they need it is of paramount importance during an emergency.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-map-embed
+    story-crisis-response-map-embed
+    story-grid__padding-x-large story-grid__row"> 
+        <div class="wrapper"> <iframe width="100%" height="100%" src="https://google.org/crisismap/2018-florence?hl=en&amp;llbox=37.164%2C33.155%2C-73.617%2C-82.499&amp;t=TERRAIN&amp;layers=7%2C2%3A100%2C17%2C11%2C12%2C8%2C34%3A100%2C31%3A100%2C33%3A100%2C30%2C28%3A100%2C29%3A100%2C27%2C25%3A100%2C26%3A100%2C24%3A100%2C22%2C20%3A100%2C21%3A100%2C23%3A100%2C18%3A100%2C14%3A100%2C16%3A100%2C13%3A100%2C15%3A100%2C3%3A65%2C1340721332252%3A68%2Clayer9%2Clayer8%2C1340722113768%2C4%2C6%2C1%2Clayer10" frameborder="0" allowfullscreen></iframe> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-maps3
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>Although there is a robust infrastructure of weather observation and ways to get that information out, there are reasons that keep people from evacuating, even in areas of the United States that are historically prone to flooding. Some families can’t afford to stay elsewhere once they leave home; others can’t afford the gas to get to a safer area, while others simply don’t have a vehicle with which to escape. Beyond economic burdens, some residents often don’t evacuate because they perceive the threat to be sensationalized, leading them to ignore or mistrust warnings.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-india1
+      story-grid__padding-medium"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>While resources like the Crisis Map contain useful information during emergency scenarios in the United States, events in other parts of the world present a range of different and escalating challenges. In India, where 20 percent of global flood-related fatalities occur – according to flood data compiled from 1953 to 2017 by India’s Central Water Commission – improving flood prediction and warning infrastructure could have a significant impact.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-crisis-response-fade-scroll story-grid__row story-grid__padding-x-large"> 
+        <div class="story-fade-scroll__container"> 
+         <div class="story-fade-scroll__bodytext story-grid__row"> 
+          <div class="body-text">
+            Earlier this year, the Crisis Response team working jointly with the Israel-based Research team launched a pilot program in India’s Ganges River Basin, an area where high population density, heavy rainfall during monsoons, and terrain prone to drastic seasonal floods combined with a difficulty to share information in a timely manner. 
+          </div> 
+         </div> 
+         <style>
+
+
+
+
+
+      @media screen  {
+ .story-figure__image-bg81a5124 {
+          background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w800-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen  and (min-resolution: 192dpi) {
+ .story-figure__image-bg81a5124 {
+            background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w1600-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 600px) {
+ .story-figure__image-bg81a5124 {
+          background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w1600-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 600px) and (min-resolution: 192dpi) {
+ .story-figure__image-bg81a5124 {
+            background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w3200-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 1024px) {
+ .story-figure__image-bg81a5124 {
+          background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w2880-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+ .story-figure__image-bg81a5124 {
+            background-image: url(https://lh3.googleusercontent.com/i7Gev7fWr2EeoTf8eNpY_VfQWifivXYjvKl1gK03XwOnMvxmrMrrsPlinXeAHbPYCvkvCOwDqdmSNDl5DV7MQin4jX5FTMmhKZWXeds=w5760-l80-sg-rj-c0xffffff);
+          }
+        }
+
+  </style> 
+         <div class="story-figure__image-bg
+    story-figure__image-bg81a5124" role="img" aria-label="Aerial photography of river basin"> 
+         </div> 
+        </div> 
+        <div class="story-fade-scroll__container"> 
+         <div class="story-fade-scroll__bodytext story-grid__row"> 
+          <div class="body-text">
+            Members of the Israel–based team, along with the Overhead Imagery team, have been using satellite imagery and artificial intelligence to produce elevation maps of the surrounding rivers in India to provide more reliable flood predictions. That information is used to model accurately what areas will be flooded, then overlaid with river measurement data published publicly by the Indian government, then shared through cell phone notifications and Search results. 
+          </div> 
+         </div> 
+         <style>
+
+
+
+
+
+      @media screen  {
+ .story-figure__image-bgd94d0ec {
+          background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w800);
+        }
+      }
+
+        @media screen  and (min-resolution: 192dpi) {
+ .story-figure__image-bgd94d0ec {
+            background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w1600);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 600px) {
+ .story-figure__image-bgd94d0ec {
+          background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w1600);
+        }
+      }
+
+        @media screen and (min-width: 600px) and (min-resolution: 192dpi) {
+ .story-figure__image-bgd94d0ec {
+            background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w3200);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 1024px) {
+ .story-figure__image-bgd94d0ec {
+          background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w2880);
+        }
+      }
+
+        @media screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+ .story-figure__image-bgd94d0ec {
+            background-image: url(https://lh3.googleusercontent.com/Gxed56E9ABb4b215h211VkxProNpWwv4OPnvdWJmRko-oQGirCFUP0A-brWC9lkRp3jQVm9dcplbhsTg_W__50v3CtOty40urjQbAg=w5760);
+          }
+        }
+
+  </style> 
+         <div class="story-figure__image-bg
+    story-figure__image-bgd94d0ec" role="img" aria-label="Topographical map of river basin showing land elevation"> 
+         </div> 
+        </div> 
+        <div class="story-fade-scroll__container"> 
+         <div class="story-fade-scroll__bodytext story-grid__row"> 
+          <div class="title story-grid__col-width-small"> <q>Being able to see these maps that show you the probability of the flood rising at your doors – people never had access to this kind of information in times of crisis before.</q> 
+           <p>Mor Schlesinger, Manager of Software Engineering for Crisis Response.</p> 
+          </div> 
+         </div> 
+         <div data-ambient-video class="story-figure__image-bg story-ambient-video story-grid__row"> 
+          <div class="story-ambient-video__wrapper"> 
+           <video class="js-story-ambient-video__video story-ambient-video__video" loop autoplay muted playsinline preload="auto" poster="https://lh3.googleusercontent.com/rJOpI2ufXBV0wgINqldl_zHk5-RE2FPS7nbNsBNDXy91JYa7ka7FMCiOz-QouFQ2woin5J21sTjBwXpbWqslQcXsH_BkhOSDcvb_CSo=l80-sg-rj-s1440"> 
+            <source src="https://kstatic.googleusercontent.com/files/36db821fff352a7c35171a5d71d63d46d5754c102c1ebe0b49883164aaee8955a49508f11e09b64a54006941e1559687b997e0922b4d4b2c0864872556542ec3" type="video/webm"> 
+            <source src="https://kstatic.googleusercontent.com/files/6895b97d03be472c5eb970dba0b09b7a28ba7c082cfe5ad68a53af6b38a4eb92d95e49a1aa0df2dd172c6098d7eeeea80c6a303dc128334d1400a39b4c4bd44f" type="video/mp4"> 
+           </video> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="story-shadow-overlay"></div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-india2
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>When activated, the SOS and Public Alerts provide information about water level, why that level is dangerous with historical context, how long that danger may last, recommended action, and where to find additional resources.</p> 
+          <p>It’s a comprehensive resource center from beginning to end, organized in a localized and actionable fashion.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__quote-component
+    story-grid__padding-x-large
+    story__quote-align-center
+    _-story-crisis-response-quote-india"> 
+        <div class="story-grid__col-width-small"> 
+         <blockquote class="story__quote-quote
+story__quote-quote-small"> 
+          <p>Telling you the flood is coming is great, but hopefully we’re providing a very simple way to understand what is going on and the information needed to make a decision.</p> 
+         </blockquote> 
+         <p class="story__quote-attribution"> <span class="story__quote-name">Mor Schlesinger,</span> Manager of Software Engineering for Crisis Response. </p> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-india3
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>This infrastructure, for observing the weather patterns that transform rivers and the surrounding land susceptible to flooding, is where the investment in machine learning and AI can have a human impact. As Schlesinger points out, “Putting all of these unique technologies and all the cloud computing together” adds up to the ability to better forecast floods and help the people affected.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-future
+      story-grid__padding-medium"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>Right now, flood-prone areas in India have up to 24-hour notice to evacuate during monsoon season. With the information gathered on the ground, the Crisis Response and Google Research teams hope to extend that window to 72 hours. Making earlier forecasts, and ensuring they’re accurate enough to gain the trust of the people who live in an affected area, could create an environment where more people are able to safely evacuate from areas that suffer regular flooding.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div data-image-grid class="story-image-grid-3-1 _-story-crisis-response-image-grid-3
+    story-grid__padding-x-large" role="tablist"> 
+        <div class="story-image-grid-3-1__mini-grid"> 
+         <div class="story-image-grid-3-1__mini-grid-row"> <a href="https://lh3.googleusercontent.com/HUeCPdlDCjLx_WToiOI3q0JgxDMF6oMHoxqQkXBqVKJSnr5MnH7FtCcaGFfjnJeNayGkrZZZXuURzmzAiuX2V75tttJ7G1Jcfpa8=l80-sg-rj-c0xffffff-s1200" ng-click="imageGridCtrl.openLightbox($event)" class="story-image-grid-3-1__item story-image-grid-3-1__item--1 js-story-image-grid__item" title="Sella Nevo and Vova Anisimov from Google Crisis Response talking with local residents in India" role="tab"> 
+           <picture class="story-image-grid-3-1__picture"> 
+            <source srcset="https://lh3.googleusercontent.com/HUeCPdlDCjLx_WToiOI3q0JgxDMF6oMHoxqQkXBqVKJSnr5MnH7FtCcaGFfjnJeNayGkrZZZXuURzmzAiuX2V75tttJ7G1Jcfpa8=l80-sg-rj-c0xffffff-s720" media="(min-width: 1280px)"> 
+            <img src="https://lh3.googleusercontent.com/I5hYbrtrS2XD79QLe5PcuNEMNWy4IuVQMgGpLXENIJd4xa4-g9UXFsAE33YfWg0TtP0HkZy_OFx8AcxjkR8MOL2_8_NfZX89hEa2=l80-sg-rj-c0xffffff" alt="Sella Nevo and Vova Anisimov from Google Crisis Response talking with local residents in India"> 
+           </picture> </a> <a href="https://lh3.googleusercontent.com/r6_-SP7yFZrXYEvxFgH2BWgCqrysfUiQteOY7dvuxC4eJIHb3j6BXWHEIE7AYEkccrItzw4UubSTvb_r3zo5Ff05_3rjeZzyH-BdlHM=l80-sg-rj-c0xffffff-s1200" ng-click="imageGridCtrl.openLightbox($event)" class="story-image-grid-3-1__item story-image-grid-3-1__item--2 js-story-image-grid__item" title="Crisis map result of impacted area" role="tab"> 
+           <picture class="story-image-grid-3-1__picture"> 
+            <source srcset="https://lh3.googleusercontent.com/r6_-SP7yFZrXYEvxFgH2BWgCqrysfUiQteOY7dvuxC4eJIHb3j6BXWHEIE7AYEkccrItzw4UubSTvb_r3zo5Ff05_3rjeZzyH-BdlHM=l80-sg-rj-c0xffffff-s720" media="(min-width: 1280px)"> 
+            <img src="https://lh3.googleusercontent.com/2B5qYXiiiyl2olAYi6BDN2qrXvdgDBbjy4XOz2mH-bE6PPSu040ZCrurt_Dts2DRAu16C3YchgwO6l1KFV6TBCXxJjy3SPoQREnN=l80-sg-rj-c0xffffff" alt="Crisis map result of impacted area"> 
+           </picture> </a> 
+         </div> 
+        </div> <a href="https://lh3.googleusercontent.com/RaucRYyxnICqxd1NWNJ8LYZEsbbS3Dw-gMby0QQon3g2l2rc0Fggx3pAd9tU9rHC9M-km5CRUqYjqCoNQbykuaz2lUx2iw60aLf2=l80-sg-rj-c0xffffff-s1200" ng-click="imageGridCtrl.openLightbox($event)" class="story-image-grid-3-1__item story-image-grid-3-1__item--featured js-story-image-grid__item" title="Boat crew measuring river depth in India" role="tab"> 
+         <picture class="story-image-grid-3-1__picture"> 
+          <source srcset="https://lh3.googleusercontent.com/RaucRYyxnICqxd1NWNJ8LYZEsbbS3Dw-gMby0QQon3g2l2rc0Fggx3pAd9tU9rHC9M-km5CRUqYjqCoNQbykuaz2lUx2iw60aLf2=l80-sg-rj-c0xffffff-s1440" media="(min-width: 1280px)"> 
+          <img src="https://lh3.googleusercontent.com/x0i2GUwaGEba11Y8vT16x5qGJ4Bmq_LFa4dOxWkV6d7cmS6PSnVIuczHbwJjZltb4BPiSoWn7ALrDm6lKk_8AzDMpW954RA4cAWs=l80-sg-rj-c0xffffff-s600" alt="Boat crew measuring river depth in India"> 
+         </picture> </a> 
+       </div> 
+       <div class="story-grid__row
+      story-grid__row-align-center
+      story__markdown-block-component
+      _-story-crisis-response-markdown-end
+      story-grid__padding-x-large"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="story__markdown-block
+        story__markdown-block--align-left
+"> 
+          <p>For Schlesinger, the future of Crisis Response involves implementing the tools the team has developed in more locations and unifying those resources in one easily accessible place. That will help to build trust in alerts and the information Google can provide.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__quote-component
+    story-grid__padding-x-large
+    story__quote-align-center
+    _-story-crisis-response-quote-end"> 
+        <div class="story-grid__col-width-small"> 
+         <blockquote class="story__quote-quote
+story__quote-quote-small"> 
+          <p>At times of crisis you have very little time to make a decision that can affect your life, that can affect the life of your loved ones. So it’s truly important to get the right information concise and complete.</p> 
+         </blockquote> 
+         <p class="story__quote-attribution"> <span class="story__quote-name">Mor Schlesinger,</span> Manager of Software Engineering for Crisis Response </p> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story-grid__padding-x-large
+    story__video-component
+    _-story-crisis-response-video-end"> 
+        <div class="story-grid__col-width-large story-grid__video"> 
+         <div class="story__video
+          story__video-content-align--" data-ng-controller="VideoPlayerCtrl as videoCtrl" data-video-id="Mz0ikfuE_z0"> 
+          <div class="video-container"> 
+           <div class="video js-only">
+            <!---->
+           </div> 
+          </div> 
+          <style>
+
+
+
+
+
+      @media screen  {
+ .story__video-image46ed616 {
+          background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w600-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen  and (min-resolution: 192dpi) {
+ .story__video-image46ed616 {
+            background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w1200-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 600px) {
+ .story__video-image46ed616 {
+          background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w1024-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 600px) and (min-resolution: 192dpi) {
+ .story__video-image46ed616 {
+            background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w2048-l80-sg-rj-c0xffffff);
+          }
+        }
+
+
+
+
+
+
+      @media screen and (min-width: 1024px) {
+ .story__video-image46ed616 {
+          background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w1440-l80-sg-rj-c0xffffff);
+        }
+      }
+
+        @media screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+ .story__video-image46ed616 {
+            background-image: url(https://lh3.googleusercontent.com/AL8uIoafQ2i6u8vhyNOMuDkdsjynbh25kLja_GLbUAsq2p08PBGuiAgZ_9OQxX-RykFwyev6lGQkdyqsg8lF2_VIFUPI3daothWm=w2880-l80-sg-rj-c0xffffff);
+          }
+        }
+
+  </style> 
+          <div class="story__video-posterframe
+            crossfade
+            story__video-image46ed616" data-ng-if="videoCtrl.videoHide"> 
+           <div class="watch-youtube-video crossfade" data-ng-if="videoCtrl.videoHide"> <a data-ng-click="videoCtrl.playVideo($event)" title="Watch the video" role="button" tabindex="0" href="https://www.youtube.com/embed/Mz0ikfuE_z0?controls=0&amp;autoplay=1&amp;loop=1&amp;playlist=Mz0ikfuE_z0"> 
+             <div class="icon-play">
+              <svg id="mi-youtube-icon" viewbox="0 0 28 20" width="100%" height="100%"> <path d="M11.2,14.1V5.9l7.5,4.3L11.2,14.1z M27.7,4.2c0,0-0.3-1.9-1.1-2.8c-1.1-1.1-2.3-1.1-2.8-1.2 C19.9,0,14,0,14,0S8.1,0,4.2,0.2C3.7,0.3,2.5,0.3,1.4,1.4C0.6,2.3,0.3,4.2,0.3,4.2S0,6.5,0,8.8v2.4c0,2.3,0.3,4.6,0.3,4.6 s0.3,1.9,1.1,2.8c1.1,1.1,2.5,1.1,3.1,1.2C6.7,20,13.8,20,14,20c0,0,5.9,0,9.8-0.3c0.5-0.1,1.7-0.1,2.8-1.2c0.8-0.8,1.1-2.8,1.1-2.8 s0.3-2.3,0.3-4.6V8.8C28,6.5,27.7,4.2,27.7,4.2L27.7,4.2z"> 
+               </path> 
+              </svg>
+             </div> </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__social-share-component
+    story__social-share-align-normal
+    story-grid__padding-medium
+    _-story-crisis-response-sharing-bottom"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="share-widget-container story__social-share"> 
+          <div class="share-widget share-widget-open" data-ng-controller="ShareCtrl as shareCtrl" data-ng-class="{'share-widget-open':shareCtrl.isOpen}"> 
+           <ul class="share-widget-icons"> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-email w-animate-opacity" target="_blank" href="mailto:?subject=Inside Google: How the Crisis Response team is building tools to alert users with accurate information during emergency situations&amp;body=https://about.google/stories/soundingthealarm/%3Futm_source%3Dabout.google%26utm_medium%3Dsocial%26utm_campaign%3Demail-link" aria-label="Share - Email" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-bottom" data-g-name="story-crisis-response-sharing-bottom" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_email">Share - Email</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#df4b31" r="25" transform="translate(-.05 .05)"></circle> 
+                 <path d="M38.47 14.9l-27 .05a1.85 1.85 0 0 0-1.84 1.85v16.45a1.85 1.85 0 0 0 1.85 1.84l27-.05a1.85 1.85 0 0 0 1.84-1.85V16.74a1.85 1.85 0 0 0-1.85-1.84zm-2.89 2.31l-11 9.14-10.3-9.1zm2 15.52l-25.14.05a.46.46 0 0 1-.46-.46V18.57l11.7 10.37a1.25 1.25 0 0 0 1.62 0L38 18.44v13.83a.46.46 0 0 1-.42.47z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-copy w-animate-opacity" data-share-url="Link copied to the clipboard" tabindex="0" aria-label="Get shareable link" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-bottom" data-g-name="story-crisis-response-sharing-bottom" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_copy">Get shareable link</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#80868b" r="25"></circle> 
+                 <path d="M18.88 23.37h12.24v3.26H18.88zm4.59 6.53h-6.12a4.77 4.77 0 0 1-4.59-4.9 4.77 4.77 0 0 1 4.59-4.9h6.12v-3.26h-6.12A7.92 7.92 0 0 0 9.7 25a7.92 7.92 0 0 0 7.65 8.16h6.12zm9.18-13.06h-6.12v3.26h6.12a4.77 4.77 0 0 1 4.59 4.9 4.77 4.77 0 0 1-4.59 4.9h-6.12v3.26h6.12A7.92 7.92 0 0 0 40.3 25a7.92 7.92 0 0 0-7.65-8.16z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-facebook w-animate-opacity" target="_blank" href="http://www.facebook.com/sharer.php?u=https://about.google/stories/soundingthealarm/%3Futm_source%3Dfacebook.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share" data-share-content aria-label="Share - Facebook" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-bottom" data-g-name="story-crisis-response-sharing-bottom" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_facebook_v2">Share - Facebook</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#4267b2" r="25"></circle> 
+                 <path d="M26.85 36.92V26.06h3.66l.55-4.25h-4.21V19.1c0-1.23.34-2.06 2.1-2.06h2.23v-3.79a30 30 0 0 0-3.27-.17c-3.24 0-5.45 2-5.45 5.6v3.13h-3.64v4.25h3.65v10.86z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-linkedin w-animate-opacity" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.google/stories/soundingthealarm/%3Futm_source%3Dlinkedin.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share" data-share-content aria-label="Share - LinkedIn" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-bottom" data-g-name="story-crisis-response-sharing-bottom" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_linkedin_v2">Share - LinkedIn</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#0073b2" r="25"></circle> 
+                 <path class="cls-2" d="M17.47 13.52a2.38 2.38 0 1 1-2.38 2.38 2.38 2.38 0 0 1 2.38-2.38m-2.06 6.57h4.11v13.22h-4.1V20.09zm6.69 0H26v1.81h.06A4.31 4.31 0 0 1 30 19.76c4.16 0 4.93 2.74 4.93 6.3v7.25H30.8v-6.43c0-1.53 0-3.5-2.13-3.5s-2.46 1.62-2.46 3.39v6.54H22.1V20.09z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-twitter w-animate-opacity" target="_blank" href="http://twitter.com/share?url=https://about.google/stories/soundingthealarm/%3Futm_source%3Dtwitter.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share&amp;text=How%20engineers%20build%20tools%20to%20share%20information%20in%20an%20emergency%40Google" data-share-content aria-label="Share - Twitter" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-bottom" data-g-name="story-crisis-response-sharing-bottom" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_twitter_v2">Share - Twitter</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#1da1f2" r="25"></circle> 
+                 <path d="M22.21 34.46A12.4 12.4 0 0 0 34.7 22v-.57a8.93 8.93 0 0 0 2.19-2.27 8.76 8.76 0 0 1-2.52.69 4.4 4.4 0 0 0 1.93-2.43 8.8 8.8 0 0 1-2.79 1.07 4.39 4.39 0 0 0-7.48 4 12.46 12.46 0 0 1-9-4.59 4.39 4.39 0 0 0 1.36 5.86 4.36 4.36 0 0 1-2-.55v.06a4.39 4.39 0 0 0 3.52 4.3 4.38 4.38 0 0 1-2 .08 4.39 4.39 0 0 0 4.1 3 8.81 8.81 0 0 1-5.45 1.88 8.93 8.93 0 0 1-1-.06 12.42 12.42 0 0 0 6.73 2" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="story-grid__row
+    story-grid__row-align-center
+    story__social-share-component
+    story__social-share-align-normal
+    story-grid__padding-medium
+    _-story-crisis-response-sharing-top"> 
+        <div class="story-grid__col-width-small"> 
+         <div class="share-widget-container story__social-share"> 
+          <div class="share-widget share-widget-open" data-ng-controller="ShareCtrl as shareCtrl" data-ng-class="{'share-widget-open':shareCtrl.isOpen}"> 
+           <ul class="share-widget-icons"> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-email w-animate-opacity" target="_blank" href="mailto:?subject=Inside Google: How the Crisis Response team is building tools to alert users with accurate information during emergency situations&amp;body=https://about.google/stories/soundingthealarm/%3Futm_source%3Dabout.google%26utm_medium%3Dsocial%26utm_campaign%3Demail-link" aria-label="Share - Email" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-top" data-g-name="story-crisis-response-sharing-top" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_email">Share - Email</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#df4b31" r="25" transform="translate(-.05 .05)"></circle> 
+                 <path d="M38.47 14.9l-27 .05a1.85 1.85 0 0 0-1.84 1.85v16.45a1.85 1.85 0 0 0 1.85 1.84l27-.05a1.85 1.85 0 0 0 1.84-1.85V16.74a1.85 1.85 0 0 0-1.85-1.84zm-2.89 2.31l-11 9.14-10.3-9.1zm2 15.52l-25.14.05a.46.46 0 0 1-.46-.46V18.57l11.7 10.37a1.25 1.25 0 0 0 1.62 0L38 18.44v13.83a.46.46 0 0 1-.42.47z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-copy w-animate-opacity" data-share-url="Link copied to the clipboard" tabindex="0" aria-label="Get shareable link" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-top" data-g-name="story-crisis-response-sharing-top" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_copy">Get shareable link</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#80868b" r="25"></circle> 
+                 <path d="M18.88 23.37h12.24v3.26H18.88zm4.59 6.53h-6.12a4.77 4.77 0 0 1-4.59-4.9 4.77 4.77 0 0 1 4.59-4.9h6.12v-3.26h-6.12A7.92 7.92 0 0 0 9.7 25a7.92 7.92 0 0 0 7.65 8.16h6.12zm9.18-13.06h-6.12v3.26h6.12a4.77 4.77 0 0 1 4.59 4.9 4.77 4.77 0 0 1-4.59 4.9h-6.12v3.26h6.12A7.92 7.92 0 0 0 40.3 25a7.92 7.92 0 0 0-7.65-8.16z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-facebook w-animate-opacity" target="_blank" href="http://www.facebook.com/sharer.php?u=https://about.google/stories/soundingthealarm/%3Futm_source%3Dfacebook.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share" data-share-content aria-label="Share - Facebook" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-top" data-g-name="story-crisis-response-sharing-top" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_facebook_v2">Share - Facebook</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#4267b2" r="25"></circle> 
+                 <path d="M26.85 36.92V26.06h3.66l.55-4.25h-4.21V19.1c0-1.23.34-2.06 2.1-2.06h2.23v-3.79a30 30 0 0 0-3.27-.17c-3.24 0-5.45 2-5.45 5.6v3.13h-3.64v4.25h3.65v10.86z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-linkedin w-animate-opacity" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://about.google/stories/soundingthealarm/%3Futm_source%3Dlinkedin.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share" data-share-content aria-label="Share - LinkedIn" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-top" data-g-name="story-crisis-response-sharing-top" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_linkedin_v2">Share - LinkedIn</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#0073b2" r="25"></circle> 
+                 <path class="cls-2" d="M17.47 13.52a2.38 2.38 0 1 1-2.38 2.38 2.38 2.38 0 0 1 2.38-2.38m-2.06 6.57h4.11v13.22h-4.1V20.09zm6.69 0H26v1.81h.06A4.31 4.31 0 0 1 30 19.76c4.16 0 4.93 2.74 4.93 6.3v7.25H30.8v-6.43c0-1.53 0-3.5-2.13-3.5s-2.46 1.62-2.46 3.39v6.54H22.1V20.09z" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+            <li> <p class="share-widget-icon-placeholder"><!----></p> <a class="share-widget-icon-link share-widget-icon-twitter w-animate-opacity" target="_blank" href="http://twitter.com/share?url=https://about.google/stories/soundingthealarm/%3Futm_source%3Dtwitter.com%26utm_medium%3Dsocial%26utm_campaign%3Dstory-share&amp;text=How%20engineers%20build%20tools%20to%20share%20information%20in%20an%20emergency%40Google" data-share-content aria-label="Share - Twitter" data-g-category="share-widget" data-g-action="share-widget-click" data-g-label="story-crisis-response-sharing-top" data-g-name="story-crisis-response-sharing-top" data-g-href="https://about.google/stories/soundingthealarm/"> 
+              <svg class="share-widget-icon" fill="#FFFFFF" height="48px" viewbox="0 0 50 50" width="48px"> 
+               <title id="icon_twitter_v2">Share - Twitter</title> <g> 
+                <g> 
+                 <circle cx="25" cy="25" fill="#1da1f2" r="25"></circle> 
+                 <path d="M22.21 34.46A12.4 12.4 0 0 0 34.7 22v-.57a8.93 8.93 0 0 0 2.19-2.27 8.76 8.76 0 0 1-2.52.69 4.4 4.4 0 0 0 1.93-2.43 8.8 8.8 0 0 1-2.79 1.07 4.39 4.39 0 0 0-7.48 4 12.46 12.46 0 0 1-9-4.59 4.39 4.39 0 0 0 1.36 5.86 4.36 4.36 0 0 1-2-.55v.06a4.39 4.39 0 0 0 3.52 4.3 4.38 4.38 0 0 1-2 .08 4.39 4.39 0 0 0 4.1 3 8.81 8.81 0 0 1-5.45 1.88 8.93 8.93 0 0 1-1-.06 12.42 12.42 0 0 0 6.73 2" fill="#fff" /> 
+                </g> 
+               </g> 
+              </svg> </a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+   </div> 
+   <section class="story__tags-in-story-component" data-ng-cloak=""> 
+    <div class="h-c-page"> 
+     <div class="h-c-grid"> 
+      <div class="story__tags-in-story h-c-grid__col h-c-grid__col--s-4 h-c-grid__col--12">
+        In this story: <a href="../../stories/all-stories/?topic=crisis-response" target="_self"> crisis response </a> <span class="delimiter">,</span> <a href="../../stories/all-stories/?topic=google-org" target="_self"> Google.org </a> <span class="delimiter">,</span> <a href="../../stories/ai/" target="_self"> AI </a> <span class="delimiter">,</span> <a href="../../stories/sustainability/" target="_self"> sustainability </a> <span class="delimiter">,</span> <a href="../../stories/all-stories/?topic=india&amp;label=India&amp;category=location" target="_self"> India </a> <span class="delimiter">,</span> <a href="../../stories/all-stories/?topic=asia-and-pacific&amp;label=Asia%20%26%20Pacific&amp;category=location" target="_self"> Asia &amp; Pacific </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <section class="story__related-stories
+ story__related-stories__scroll--tablet story__related-stories__scroll--desktop" data-ng-cloak=""> 
+    <h2 class="story__related-stories__headline">Related Stories</h2> 
+    <div class="story__related-stories__carousel"> <span class="story__related-stories__carousel-group"> 
+      <div class="story__related-stories__slide" data-index="1"> <a class="story-border" href="../../stories/location-information-emergency-technology/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600" class="story__related-stories__slide-img" alt="How your smartphone could help save your life in an emergency"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          crisis response
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How your smartphone could help save your life in an emergency</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="2"> <a class="story-border" href="../../stories/save-the-bees/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600" class="story__related-stories__slide-img" alt="Meet the team using machine learning to help save the world's bees"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Meet the team using machine learning to help save the world's bees</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="3"> <a class="story-border" href="../../stories/seeingpotential/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w600" class="story__related-stories__slide-img" alt="How AI is helping doctors prevent blindness in diabetics"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          health
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How AI is helping doctors prevent blindness in diabetics</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="4"> <a class="story-border" href="../../stories/soundwaves/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w600" class="story__related-stories__slide-img" alt="A young music lover finds his path by following the call of the whales"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A young music lover finds his path by following the call of the whales</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="5"> <a class="story-border" href="../../stories/rainforest/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600" class="story__related-stories__slide-img" alt="A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="6"> <a class="story-border" href="../../stories/ocean-data-to-predict-the-weather/" target="_self" tabindex="0"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w600" class="story__related-stories__slide-img" alt="Supporting innovative solutions to help better understand our oceans"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Supporting innovative solutions to help better understand our oceans</h3> 
+        </div> </a> 
+      </div> </span> <span class="story__related-stories__carousel-group"> 
+      <div class="story__related-stories__slide" data-index="1"> <a class="story-border" href="../../stories/location-information-emergency-technology/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600" class="story__related-stories__slide-img" alt="How your smartphone could help save your life in an emergency"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          crisis response
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How your smartphone could help save your life in an emergency</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="2"> <a class="story-border" href="../../stories/save-the-bees/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600" class="story__related-stories__slide-img" alt="Meet the team using machine learning to help save the world's bees"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Meet the team using machine learning to help save the world's bees</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="3"> <a class="story-border" href="../../stories/seeingpotential/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w600" class="story__related-stories__slide-img" alt="How AI is helping doctors prevent blindness in diabetics"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          health
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How AI is helping doctors prevent blindness in diabetics</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="4"> <a class="story-border" href="../../stories/soundwaves/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w600" class="story__related-stories__slide-img" alt="A young music lover finds his path by following the call of the whales"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A young music lover finds his path by following the call of the whales</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="5"> <a class="story-border" href="../../stories/rainforest/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600" class="story__related-stories__slide-img" alt="A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="6"> <a class="story-border" href="../../stories/ocean-data-to-predict-the-weather/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w600" class="story__related-stories__slide-img" alt="Supporting innovative solutions to help better understand our oceans"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Supporting innovative solutions to help better understand our oceans</h3> 
+        </div> </a> 
+      </div> </span> <span class="story__related-stories__carousel-group"> 
+      <div class="story__related-stories__slide" data-index="1"> <a class="story-border" href="../../stories/location-information-emergency-technology/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8Rh-qE4A8lqpMN7d0VKDVPtputpMcYmKLkganQFg8bF4RzqKKrzGqH9ta1RJ1T_obzMcS3msSRyQKsQ0CKjfKJJhKchsTKRHDmOyXw=w600" class="story__related-stories__slide-img" alt="How your smartphone could help save your life in an emergency"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          crisis response
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How your smartphone could help save your life in an emergency</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="2"> <a class="story-border" href="../../stories/save-the-bees/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-2"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/dTH5_J82_TqXaLW_Hzq1rbMVqfzRWG9PkcKgHdjXphAy9M4MZF5Q7_cQZeM1kbqEYMysrBLlY4szACDZwIbP7Jm17BnGNjT0Tht8Qw=w600" class="story__related-stories__slide-img" alt="Meet the team using machine learning to help save the world's bees"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Meet the team using machine learning to help save the world's bees</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="3"> <a class="story-border" href="../../stories/seeingpotential/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/VJvJZwKiF41oTc7_syfzHZx7AL1_2dGVvyRVx5Gfsla_O-V0_FUGTfFiS-hWfDuY2i1X2LI8Z2UkHkchCckq6jo57CV_qV-a5PHP2J0=w600" class="story__related-stories__slide-img" alt="How AI is helping doctors prevent blindness in diabetics"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          health
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">How AI is helping doctors prevent blindness in diabetics</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="4"> <a class="story-border" href="../../stories/soundwaves/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/1l5D3Tcieg_zbSFp_haO3QTuY3pC-jW1VUj36THvkgbDDc31Fufg71fJjWdnpkL1765J0jlfTwRKeLs15OT7yUy5oMQs8Sh1201c=w600" class="story__related-stories__slide-img" alt="A young music lover finds his path by following the call of the whales"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A young music lover finds his path by following the call of the whales</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="5"> <a class="story-border" href="../../stories/rainforest/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1440-h960-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2880-h1920-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1080-h720-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w2160-h1440-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600-h400-n-l50-sg-rj
+,https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w1200-h800-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/8p9D7GbVg4hTJzKEveM4yltHxwm_zuAQAX1KqgRVL6gbodSsSJPIRVSE4-1_6wexbfZpbHW15kNvDSs0B_ycvhJyoPX1RZT3Ci17Aw=w600" class="story__related-stories__slide-img" alt="A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          Search on
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">A tribe uses cell phones and TensorFlow to fight illegal logging in the Amazon</h3> 
+        </div> </a> 
+      </div> 
+      <div class="story__related-stories__slide" data-index="6"> <a class="story-border" href="../../stories/ocean-data-to-predict-the-weather/" target="_self" tabindex="-1"> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link-img"> 
+         <div class="story__related-stories__slide-img-wrapper story__related-stories__slide-img-wrapper--3-4"> 
+          <div class="border-image"> <picture> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1080-h1440-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w2160-h2880-n-l50-sg-rj 2x" media="(min-width: 1024px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w810-h1080-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w1620-h2160-n-l50-sg-rj 2x" media="(min-width: 600px)"> 
+            <source srcset="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w450-h600-n-l50-sg-rj
+,https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w900-h1200-n-l50-sg-rj 2x"> 
+            <img src="https://lh3.googleusercontent.com/fl-GT6w3Ls6RT4vYnbkuYUyLY3lZJH8VtZ7xzxiym9YYaoVRCnZehdz6Icd0oAf6i3H9-O5cCNs6eunlxWr_Csstgsb98DdzNdLFBOlhw9NUfHdyuQjI=w600" class="story__related-stories__slide-img" alt="Supporting innovative solutions to help better understand our oceans"> 
+           </picture> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="primary-tag-link"> 
+         <div class="primary-tag">
+          sustainability
+         </div> 
+        </div> 
+        <div class="story__related-stories__slide-link story__related-stories__slide-link--description"> 
+         <h3 class="story__related-stories__slide-title">Supporting innovative solutions to help better understand our oceans</h3> 
+        </div> </a> 
+      </div> </span> 
+    </div> 
+    <div class="story__related-stories__divider"></div> 
+   </section> 
+  </main> 
+  <div class="cap" data-about-footer data-ng-class="{'footer--hidden': footerCtrl.footerHidden}" data-ng-cloak=""> <a href="#" class="scroll-to-top" data-scroll data-track-event data-track-event-category="about us" data-track-event-action="back-to-top" data-track-event-label="/stories/soundingthealarm/index.html"> Back to top 
+    <svg alt="" class="scroll-to-top-icon" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewbox="0 0 20 20"> <g stroke="none" stroke-width="1" fill="inherit"> 
+      <circle fill="inherit" cx="9" cy="9" r="9"></circle> 
+      <polygon fill="#fff" points="3 9 4.0575 10.0575 8.25 5.8725 8.25 15 9.75 15 9.75 5.8725 13.935 10.065 15 9 9 3"></polygon> 
+     </g> 
+    </svg> </a> 
+  </div> 
+  <footer class="footer" data-about-footer data-ng-class="{'footer--hidden': footerCtrl.footerHidden}" data-ng-cloak=""> 
+   <div class="main"> 
+    <div class="main-inner"> 
+     <section class="social"> 
+      <div class="social-inner"> 
+       <h2>Follow us</h2> 
+       <ul> 
+        <li> <a href="https://instagram.com/google/" target="_blank" aria-label="Instagram" data-g-nav-link data-g-category="site navigation" data-g-action="social follow - instagram" data-g-label="footer"> 
+          <svg alt="Instagram" class="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24" fill="#000"> <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" /> 
+          </svg> </a> </li> 
+        <li> <a href="https://www.youtube.com/user/Google" target="_blank" aria-label="YouTube" data-g-nav-link data-g-category="site navigation" data-g-action="social follow - youtube" data-g-label="footer"> 
+          <svg alt="YouTube" class="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24" fill="#000"> <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" /> 
+          </svg> </a> </li> 
+        <li> <a href="https://twitter.com/google" target="_blank" aria-label="Twitter" data-g-nav-link data-g-category="site navigation" data-g-action="social follow - twitter" data-g-label="footer"> 
+          <svg alt="Twitter" class="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24" fill="#000"> <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" /> 
+          </svg> </a> </li> 
+        <li> <a href="https://www.facebook.com/Google" target="_blank" aria-label="Facebook" data-g-nav-link data-g-category="site navigation" data-g-action="social follow - facebook" data-g-label="footer"> 
+          <svg alt="Facebook" class="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24" fill="#000"> <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0" /> 
+          </svg> </a> </li> 
+        <li> <a href="https://www.linkedin.com/company/google" target="_blank" aria-label="LinkedIn" data-g-nav-link data-g-category="site navigation" data-g-action="social follow - linkedin" data-g-label="footer"> 
+          <svg alt="LinkedIn" class="" width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /> 
+          </svg> </a> </li> 
+       </ul> 
+      </div> 
+     </section> 
+     <section class="sitemap"> 
+      <ul class="cols-row footer-links glue-zippy-set-single" id="footer-sitemap-links"> 
+       <li id="footer-sitemap-about" class="glue-zippy glue-a-zippy--v-smooth-expand"> <h2 class="glue-zippy-btn">More about us 
+         <svg alt="" class="icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24"> <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="currentcolor" /> 
+         </svg> </h2> 
+        <div class="glue-zippy-content"> 
+         <ul class="links-list"> 
+          <li> <a href="../../contact-google/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - contact-us" data-g-label="footer"> Contact us </a> </li> 
+          <li> <a href="https://abc.xyz/investor/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - investor-relations" data-g-label="footer"> Investor relations </a> </li> 
+          <li> <a href="https://careers.google.com/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - careers" data-g-label="footer"> Careers </a> </li> 
+          <li> <a href="../../locations/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - locations" data-g-label="footer"> Locations </a> </li> 
+          <li> <a href="https://www.blog.google/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - blog" data-g-label="footer"> Blog </a> </li> 
+          <li> <a href="https://www.blog.google/press/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - press-resources" data-g-label="footer"> Press resources </a> </li> 
+          <li> <a href="https://www.google.com/permissions/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - brand-resource-center" data-g-label="footer"> Brand resource center </a> </li> 
+          <li> <a href="https://www.thinkwithgoogle.com/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="more about us - think-with-google" data-g-label="footer"> Think with Google </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li id="footer-sitemap-policy-content" class="glue-zippy glue-a-zippy--v-smooth-expand"> <h2 class="glue-zippy-btn">Policy 
+         <svg alt="" class="icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24"> <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="currentcolor" /> 
+         </svg> </h2> 
+        <div class="glue-zippy-content"> 
+         <ul class="links-list"> 
+          <li> <a href="../../appsecurity/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="policy - application-security" data-g-label="footer"> Application security </a> </li> 
+          <li> <a href="https://www.google.com/about/software-principles.html" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="policy - software-principles" data-g-label="footer"> Software principles </a> </li> 
+          <li> <a href="https://www.google.com/about/unwanted-software-policy.html" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="policy - unwanted-software-policy" data-g-label="footer"> Unwanted software policy </a> </li> 
+          <li> <a href="../../extended-workforce/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="policy - extended-workforce" data-g-label="footer"> Extended workforce </a> </li> 
+          <li> <a href="../../community-guidelines" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="policy - community-guidelines" data-g-label="footer"> Community guidelines </a> </li> 
+          <li> <a href="../../how-our-business-works/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="policy - how-google-works" data-g-label="footer"> How our business works </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li id="social-responsibility" class="glue-zippy glue-a-zippy--v-smooth-expand"> <h2 class="glue-zippy-btn">Responsibility 
+         <svg alt="" class="icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 24 24"> <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="currentcolor" /> 
+         </svg> </h2> 
+        <div class="glue-zippy-content"> 
+         <ul class="links-list"> 
+          <li> <a href="https://www.google.org" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - google-dot-org" data-g-label="footer"> Google.org </a> </li> 
+          <li> <a href="https://sustainability.google" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - sustainability" data-g-label="footer"> Sustainability </a> </li> 
+          <li> <a href="https://crisisresponse.google/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - crisis-response" data-g-label="footer"> Crisis Response </a> </li> 
+          <li> <a href="https://www.google.com/diversity/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - diversity" data-g-label="footer"> Diversity &amp; Inclusion </a> </li> 
+          <li> <a href="https://www.google.com/accessibility/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - accessibility" data-g-label="footer"> Accessibility </a> </li> 
+          <li> <a href="https://transparencyreport.google.com" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - transparency" data-g-label="footer"> Transparency </a> </li> 
+          <li> <a href="https://wellbeing.google" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - digital-wellbeing" data-g-label="footer"> Digital Wellbeing </a> </li> 
+          <li> <a href="https://safety.google/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - safety-center" data-g-label="footer"> Safety Center </a> </li> 
+          <li> <a href="../../google-safety-engineering-center" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - gsec" data-g-label="footer"> Google Safety Engineering Center </a> </li> 
+          <li> <a href="https://www.google.com/about/responsible-supply-chain/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - supplier-responsibility" data-g-label="footer"> Supplier responsibility </a> </li> 
+          <li> <a href="../../human-rights/" target="_self" data-g-nav-link data-g-category="site navigation" data-g-action="responsibility - human-rights" data-g-label="footer"> Human Rights </a> </li> 
+         </ul> 
+        </div> </li> 
+      </ul> 
+     </section> 
+     <section class="foot"> 
+      <div class="product-logo"> <a href="../../" target="_self" aria-label="Google" data-g-nav-link data-g-category="site navigation" data-g-action="google logo" data-g-label="footer"> 
+        <svg alt="Google" class="logo-svg " xmlns="http://www.w3.org/2000/svg" viewbox="0 0 86 28"> <path fill="#4285F4" d="M10.4,21C4.7,21,0,16.2,0,10.5S4.7,0,10.4,0c3.1,0,5.3,1.3,7,2.9l-1.9,2c-1.2-1.2-2.8-2-5-2
+      c-4.1,0-7.3,3.4-7.3,7.6s3.2,7.6,7.3,7.6c2.7,0,4.2-1.1,5.1-2.1c0.8-0.8,1.3-2,1.5-3.8h-6.6V9.3h9.3c0.1,0.5,0.2,1.1,0.2,1.8
+      c0,2.2-0.5,5-2.4,6.9C15.7,20,13.4,21,10.4,21z" /> <path fill="#EA4335" d="M34.2,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S34.2,10.2,34.2,14.1z M31.4,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C29.6,18.2,31.4,16.5,31.4,14.1z" /> <path fill="#FBBC03" d="M48.4,14.1c0,3.9-2.9,6.7-6.6,6.7s-6.6-2.8-6.6-6.7s2.9-6.7,6.6-6.7S48.4,10.2,48.4,14.1z M45.5,14.1
+      c0-2.5-1.7-4.1-3.7-4.1c-1.9,0-3.7,1.6-3.7,4.1c0,2.4,1.7,4.1,3.7,4.1C43.8,18.2,45.5,16.5,45.5,14.1z" /> <path fill="#4285F4" d="M61.7,7.8V20c0,5-2.7,7-6.1,7c-3.2,0-5-2.2-5.8-4l2.5-1.1c0.4,1.1,1.5,2.4,3.3,2.4c2.1,0,3.4-1.4,3.4-3.9v-1
+      h-0.1c-0.6,0.8-1.8,1.6-3.4,1.6c-3.3,0-6.2-2.9-6.2-6.8s2.9-6.7,6.2-6.7c1.6,0,2.7,0.7,3.4,1.6h0.1V7.8H61.7z M59.2,14.1
+      c0-2.4-1.5-4.1-3.5-4.1c-1.9,0-3.5,1.7-3.5,4.1s1.5,4.1,3.5,4.1C57.7,18.2,59.2,16.5,59.2,14.1z" /> <path fill="#34A853" d="M66.4,1.1v19.8h-2.8V1.1H66.4z" /> <path fill="#EA4335" d="M77.7,16.3l2.2,1.6c-0.7,1.1-2.5,3-5.5,3c-3.7,0-6.5-2.9-6.5-6.7c0-4,2.8-6.7,6.2-6.7c3.4,0,5,2.8,5.6,4.3
+      l0.3,0.7l-8.8,3.7c0.7,1.4,1.7,2,3.2,2S76.9,17.5,77.7,16.3z M70.8,14l5.8-2.5c-0.4-0.8-1.3-1.5-2.4-1.5C72.7,10,70.7,11.3,70.8,14
+      z" /> 
+        </svg> </a> 
+      </div> 
+      <ul class="bottom-links"> 
+       <li> <a href="https://support.google.com?hl=en" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="bottom footer - help" data-g-label="footer"> 
+         <svg alt="" class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" fill="#000"> <path d="M0 0h24v24H0z" fill="none" /> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" /> 
+         </svg> Help </a> </li> 
+       <li> <a href="https://www.google.com/policies/privacy/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="bottom footer - privacy" data-g-label="footer"> Privacy </a> </li> 
+       <li> <a href="https://www.google.com/policies/terms/" target="_blank" data-g-nav-link data-g-category="site navigation" data-g-action="bottom footer - terms" data-g-label="footer"> Terms </a> </li> 
+      </ul> 
+     </section> 
+    </div> 
+   </div> 
+  </footer> 
+  <div data-ui-view="modal" class="modal"></div> 
+  <div class="progress" data-ng-if="mainCtrl.isLoading"> <span class="progress-bar progress-bar1"><!----></span> <span class="progress-bar progress-bar2"><!----></span> 
+  </div> 
+  <script nonce="LeX9v_16Nmfxs7xZspfXiw">window.optimizeWhitelist = [];
+          window.optimizeTestModules = [];
+      </script> <!--[if gt IE 8]><!--> 
+  <script type="text/ng-template" id="/modal.html" nonce="LeX9v_16Nmfxs7xZspfXiw">
+  <div class="modal-overlay">
+    <div data-ui-view="modal-content" class="modal-content"></div>
+    <button class="glue-modal-close" aria-label="close" data-ng-click="modalStateCtrl.closeModal()">  <svg alt=""  class="icon icon-white" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+    <path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/>
+  </svg>
+</button>
+  </div>
+</script> 
+  <script type="text/ng-template" id="/glue/modal/modal-template.html" nonce="LeX9v_16Nmfxs7xZspfXiw">
+  <div>
+    <div class="glue-modal-overlay overlay-animate" data-glue-show="modalCtrl.getModalVisible()" data-ng-if="modalCtrl.getModalVisible()">
+      <div class="glue-modal" data-glue-show="modalCtrl.getModalVisible()" role="dialog" tabindex="-1">
+        <div class="glue-modal-content" data-ng-transclude></div>
+        <button class="glue-modal-close" aria-label="close">  <svg alt=""  class="icon icon-white" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+    <path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/>
+  </svg>
+</button>
+      </div>
+    </div>
+  </div>
+</script> 
+  <script src="//www.gstatic.com/external_hosted/picturefill/picturefill.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-touch.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-sanitize.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/ng_ui_router/release/angular-ui-router.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/gsap/v1_18_0/TweenMax.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/gsap/v1_18_0/plugins/ScrollToPlugin.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/scrollmagic/ScrollMagic.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/scrollmagic/animation.gsap.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/intersectionobserver_polyfill/intersection-observer.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/external_hosted/pixi/pixi.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.google.com/jsapi" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="//www.gstatic.com/feedback/js/help/prod/service/lazy.min.js" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="/assets-stories-2019-custom/js/main.min.js?cache=a8630f1" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script src="/assets-stories-2019-custom/js/detect.min.js?cache=c84f19a" nonce="LeX9v_16Nmfxs7xZspfXiw"></script> 
+  <script data-autoload-cookie-consent-bar="true" data-autoload-cookie-consent-bar-intl-code="" src="https://www.gstatic.com/brandstudio/kato/cookie_choice_component/cookie_consent_bar.v3.js" nonce="LeX9v_16Nmfxs7xZspfXiw">
+        </script> <!--<![endif]-->  
+ </body>
+</html>

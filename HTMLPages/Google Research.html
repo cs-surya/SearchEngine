@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <base href="/"> 
+  <meta charset="utf-8"> 
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"> 
+  <meta name="google-site-verification" content="o6SchIZo_wF_qwuEKN7nxFBlyY8AvT5tkTVk2PuMP4c"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, height=device-height"> 
+  <title>Google Research</title> 
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Google Research",
+        "url": "https://research.google",
+        "logo": "https://research.google/static/images/share-9cd7266ef5001b20f98e01062c26189fa69ed6c784df04caf809668887fd339a.png"
+      }
+    </script> 
+  <meta property="og:image" content="https://research.google/static/images/share-9cd7266ef5001b20f98e01062c26189fa69ed6c784df04caf809668887fd339a.png"> 
+  <meta property="og:title" content="Google Research"> 
+  <meta property="og:site_name" content="Google Research"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="https://research.google/"> 
+  <meta name="description" content="Researchers across Google are innovating across many domains. We challenge conventions and reimagine technology so that everyone can benefit."> 
+  <meta property="og:description" content="Researchers across Google are innovating across many domains. We challenge conventions and reimagine technology so that everyone can benefit."> 
+  <link rel="shortcut icon" href="/static/images/favicon-6da5620880159634213e197fafca1dde0272153be3e4590818533fab8d040770.ico" type="image/x-icon"> 
+  <link href="/css/main_min_css.css" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:+400,500,700|Product+Sans:400|Roboto:300,400,500,700|Roboto+Mono:500&amp;display=swap" media="all" rel="stylesheet"> <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8QBZ7Q');</script> <!-- End Google Tag Manager --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+ </head> 
+ <body class="page--home"> <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8QBZ7Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> <!-- End Google Tag Manager (noscript) --> 
+  <header ng-controller="HeaderController as headerCtrl"> 
+   <div class="header__top"> <a href="" class="header__hamburger" ng-click="headerCtrl.open()" aria-expanded="false" aria-label="Open the navigation drawer" aria-controls="header__nav"> 
+     <div class="header__hamburger-burger"></div> </a> <a href="/" class="header__lockup"> <span class="off-screen">Google Research</span> 
+     <div class="header__logo"> 
+      <img src="/static/images/google_research_lockup-121987c06c0aa0ab26ca8716a0f2e7945d1cbf82077bbab9f914dac0a0bf099f.svg" alt="Google Research Logo"> 
+     </div> </a> 
+    <nav class="header__nav" id="header__nav" aria-label="Navigation"> <a href="/" class="header__lockup"> <span class="off-screen">Google Research</span> 
+      <div class="header__logo"> 
+       <img src="/static/images/google_research_lockup-121987c06c0aa0ab26ca8716a0f2e7945d1cbf82077bbab9f914dac0a0bf099f.svg" alt="Google Research Logo"> 
+      </div> </a> 
+     <div class="header__items"> 
+      <div class="header__item" aria-level="1"> <a href="/philosophy/" class="header__link"> Philosophy </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/research-areas/" class="header__link"> Research Areas </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/pubs/" class="header__link"> Publications </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/people/" class="header__link"> People </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/tools/" class="header__link"> Tools &amp; Downloads </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/outreach/" class="header__link"> Outreach </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="/careers/" class="header__link"> Careers </a> 
+      </div> 
+      <div class="header__item" aria-level="1"> <a href="https://ai.googleblog.com" class="header__link" target="_blank"> Blog </a> 
+      </div> 
+     </div> 
+    </nav> 
+   </div> 
+   <div class="header__overlay" ng-click="headerCtrl.close()"></div> 
+  </header> 
+  <main class="section-wrapper" ng-controller="MainController as mainCtrl"> 
+   <section class="home-hero home-hero--"> 
+    <div class="home-hero__wrapper"> 
+     <div class="content     "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <h1 class="content__title "> Advancing the state of the art </h1> 
+       </div> 
+       <div class="content__body"> 
+        <p>Google Research tackles challenges that define the technology of today and tomorrow.</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="copy copy--side   "> 
+    <div class="copy__wrapper"> 
+     <h2 class="copy__title">Our approach</h2> 
+     <div class="content     "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <div class="content__subtitle">
+          Our teams aspire to make discoveries that impact everyone, and core to our approach is sharing our research and tools to fuel progress in the field. 
+        </div> 
+       </div> 
+       <div class="content__body"> 
+        <p>Our researchers publish regularly in academic journals, release projects as open source, and apply research to Google products.</p> 
+       </div> 
+      </div> 
+      <div class="content__ctas"> <a class="button  " href="/philosophy/"> See our research philosophy </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="group group--default shift--left featured-work   has-grey-background"> 
+    <div class="group__content-wrapper"> 
+     <div class="group__title-wrapper"> 
+      <h2 class="group__title">Explore a sample of our research</h2> 
+     </div> 
+     <div class="content group__content    "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <div class="content__subtitle">
+          Researchers at Google are working in many domains. 
+        </div> 
+       </div> 
+       <div class="content__body"> 
+        <p>See some of our latest research developments from the <a href="https://ai.googleblog.com/">Google AI blog</a> and elsewhere.</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="group__gallery-wrapper"> 
+     <div class="gallery gallery--image-card
+        gallery--variable
+
+      gallery--4-columns
+
+
+
+
+    "> 
+      <div class="gallery__wrapper"> 
+       <div class="gallery__item "> 
+        <div class="card card--default has-dark-background    " data-card-type="card"> <a class="card__link" href="https://www.nature.com/articles/s41586-021-03588-y" target="_blank" title=" <i>Nature</i> Publication: Exponential suppression of bit or phase errors with cyclic error correction"><span class="hidden-text"> <i>Nature</i> Publication: Exponential suppression of bit or phase errors with cyclic error correction</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/binary-eye-c486a5f0925662e2efca89606c715fb5188252fe0eb8a1e7e7e15395a2c31248.png)"></div> 
+         <div class="content   content--long-title  "> 
+          <div class="content__text"> <span class="content__brow"> Highlighted Research </span> 
+           <div class="content__header"> 
+            <div class="content__title "> <i>Nature</i> Publication: Exponential suppression of bit or phase errors with cyclic error correction 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item "> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="http://ai.googleblog.com/2021/08/two-new-datasets-for-conversational-nlp.html" target="_blank" title="Two New Datasets for Conversational NLP: TimeDial and Disfl-QA"><span class="hidden-text">Two New Datasets for Conversational NLP: TimeDial and Disfl-QA</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/convo-nlp-5e837a17f0c1dc777ca3245d513f94de2fce2ac6367be70f67c0c6b780ef87df.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/natural-language-processing/">Natural Language Processing</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              Two New Datasets for Conversational NLP: TimeDial and Disfl-QA 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item "> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="https://ai.googleblog.com/2021/07/google-at-icml-2021.html" target="_blank" title="Google at ICML 2021"><span class="hidden-text">Google at ICML 2021</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/icml-2021-e3804210c0dd76db9c935e8b60292fc8af3b7701a79eea0e8b4acc62a00bfd65.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/machine-intelligence/">Machine Intelligence</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              Google at ICML 2021 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item "> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="http://ai.googleblog.com/2021/08/improved-detection-of-elusive-polyps.html" target="_blank" title="Improved Detection of Elusive Polyps with Machine Learning"><span class="hidden-text">Improved Detection of Elusive Polyps with Machine Learning</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/polyps-1fc1c38a4490141dac83fb36fb8b40a5f2a7b33bcc58189d2959db78727fed14.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/machine-perception/">Machine Perception</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              Improved Detection of Elusive Polyps with Machine Learning 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item "> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="http://ai.googleblog.com/2021/08/soundstream-end-to-end-neural-audio.html" target="_blank" title="SoundStream: An End-to-End Neural Audio Codec"><span class="hidden-text">SoundStream: An End-to-End Neural Audio Codec</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/codec-audio-d4732a52efd5c26cd5b7585bb08b61882411515327adb257e511e98d83388e38.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/machine-perception/">Machine Perception</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              SoundStream: An End-to-End Neural Audio Codec 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item "> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="https://ai.googleblog.com/2021/08/the-c4200m-synthetic-dataset-for.html" target="_blank" title="The C4_200M Synthetic Dataset for Grammatical Error Correction"><span class="hidden-text">The C4_200M Synthetic Dataset for Grammatical Error Correction</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/grammar-correction-4ffa61da49494c5fda6efe44c01b639c1f33d9b8ce7ef3e61eeb05b5d3971153.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/natural-language-processing/">Natural Language Processing</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              The C4_200M Synthetic Dataset for Grammatical Error Correction 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="gallery__item last"> 
+        <div class="card card--default     " data-card-type="card"> <a class="card__link" href="https://ai.googleblog.com/2021/07/multi-task-prediction-of-organ.html" target="_blank" title="Multi-task Prediction of Organ Dysfunction in ICUs"><span class="hidden-text">Multi-task Prediction of Organ Dysfunction in ICUs</span></a> 
+         <div class="card__image" style="background-image: url(/static/images/home/organ-prediction-2844d14fb2cfec475fcf4a958072978f5a439b82dae2696fa5b30c92f1912c34.png)"></div> 
+         <div class="content     "> 
+          <div class="content__text"> <span class="content__brow"> <a href="/research-areas/health-bioscience/">Health &amp; Biosceinces</a> </span> 
+           <div class="content__header"> 
+            <div class="content__title ">
+              Multi-task Prediction of Organ Dysfunction in ICUs 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="copy copy--side research-areas has-no-padding-top has-grey-background"> 
+    <div class="copy__wrapper"> 
+     <h2 class="copy__title">&nbsp;</h2> 
+     <div class="content     "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <div class="content__subtitle">
+          We reimagine technology across all areas of Computer Science research. 
+        </div> 
+       </div> 
+       <div class="content__body"> 
+        <p>Learn how we challenge conventions.</p> 
+       </div> 
+      </div> 
+      <div class="content__ctas"> <a class="button  " href="/research-areas/"> See our research areas </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="group group--pub shift--left   "> 
+    <div class="group__wrapper"> 
+     <div class="group__content-wrapper"> 
+      <div class="group__title-wrapper"> 
+       <h2 class="group__title">Publications</h2> 
+      </div> 
+      <div class="content group__content    "> 
+       <div class="content__text"> 
+        <div class="content__header"> 
+         <div class="content__subtitle">
+           We publish hundreds of research papers each year and present our work in a wide range of venues. 
+         </div> 
+        </div> 
+        <div class="content__body"> 
+         <p>See some of our most recent research.</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="group__gallery-wrapper"> 
+      <div class="gallery gallery--pub
+
+      gallery--1-columns
+
+
+
+
+    "> 
+       <div class="gallery__wrapper"> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50568/" title="Tight Inapproximability of Minimum Maximal Matching on Bipartite Graphs and Related Problems"><span class="hidden-text">Tight Inapproximability of Minimum Maximal Matching on Bipartite Graphs and Related Problems</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>We study theMinimum Maximal Matching problem, where we are asked to find in a graph the smallest matching that cannot be extended. We show that this problem is hard to approximate with any constant smaller than 2 even in bipartite graphs, assuming either of two stronger variants of Unique Games Conjecture. The bound also holds for computationally equivalent Minimum Edge Dominating Set. Our...</p> <a href="/pubs/pub50568/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content content--long-title"> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50568/" title="Tight Inapproximability of Minimum Maximal Matching on Bipartite Graphs and Related Problems">Tight Inapproximability of Minimum Maximal Matching on Bipartite Graphs and Related Problems</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span>Jan Marcinkowski</span><span>, </span> <span><a href="/people/106585/" title="Pasin Manurangsi">Pasin Manurangsi</a></span><span>, </span> <span>Szymon Dudycz</span> </p> 
+            <p class="content__venue"><span class="booktitle">Workshop on Approximation and Online Algorithms (WAOA)</span> <span class="year">(2021)</span> (to appear)</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50590/" title="CliqueMap: Productionizing an RMA-Based  Distributed Caching System"><span class="hidden-text">CliqueMap: Productionizing an RMA-Based Distributed Caching System</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>Distributed caching is a key component in the design of performant, scalable Internet services, but accessing such caches via RPC incurs high cost. Remote Memory Access (RMA) offers a promising, less costly alternative, but achieving a rich production feature set with RMA-based systems is a significant challenge, as the rich abstraction of RPC lends itself to solutions for interoperability and...</p> <a href="/pubs/pub50590/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50590/" title="CliqueMap: Productionizing an RMA-Based  Distributed Caching System">CliqueMap: Productionizing an RMA-Based Distributed Caching System</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span>Aditya Akella</span><span>, </span> <span>Amanda Strominger</span><span>, </span> <span><a href="/people/107027/" title="Amin Vahdat">Amin Vahdat</a></span><span>, </span> <span>Arjun Singhvi</span><span>, </span> <span><a href="/people/107181/" title="Dan Gibson">Dan Gibson</a></span><span>, </span> <span><a href="/people/106167/" title="Harshad Deshmukh">Harshad Deshmukh</a></span><span>, </span> <span>Maggie Anderson</span><span>, </span> <span><a href="/people/104802/" title="Milo M. K. Martin">Milo M. K. Martin</a></span><span>, </span> <span>Rob Cauble</span><span>, </span> <span>Thomas F. Wenisch</span> </p> 
+            <p class="content__venue"><span class="booktitle">SIGCOMM 2021</span> <span class="year">(2021)</span> (to appear)</p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50467/" title="College from home during COVID-19: A mixed-methods study of heterogeneous experiences"><span class="hidden-text">College from home during COVID-19: A mixed-methods study of heterogeneous experiences</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>This mixed-method study examined the experiences of college students during the COVID-19 pandemic through surveys, experience sampling data collected over two academic quarters (Spring 2019 n1 = 253; Spring 2020 n2 = 147), and semi-structured interviews with 27 undergraduate students. There were no marked changes in mean levels of depressive symptoms, anxiety, stress, or loneliness between 2019...</p> <a href="/pubs/pub50467/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content content--long-title"> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50467/" title="College from home during COVID-19: A mixed-methods study of heterogeneous experiences">College from home during COVID-19: A mixed-methods study of heterogeneous experiences</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span>Margaret E. Morris</span><span>, </span> <span>Kevin S. Kuehn</span><span>, </span> <span>Jennifer Brown</span><span>, </span> <span>Paula S. Nurius</span><span>, </span> <span>Han Zhang</span><span>, </span> <span>Yasaman S. Sefidgar</span><span>, </span> <span>Xuhai Xu</span><span>, </span> <span>Eve A. Riskin</span><span>, </span> <span>Anind K. Dey</span><span>, </span> <span><a href="/people/SunnyConsolvo/" title="Sunny Consolvo">Sunny Consolvo</a></span><span>, </span> <span>Jennifer C. Mankoff</span> </p> 
+            <p class="content__venue"><span class="booktitle">Proceedings of the ACM on Human Computer Interaction (PACM HCI)</span>, ACM <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50566/" title="Practical geospatial and sociodemographic predictors of human mobility"><span class="hidden-text">Practical geospatial and sociodemographic predictors of human mobility</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>Background: Understanding seasonal human mobility at subnational scales has important implications across sciences, from urban planning efforts to disease modeling and control. Assessing how, when, and where populations move over the course of the year, however, requires spatially and temporally resolved datasets spanning large periods of time, which can be rare, contain sensitive information,...</p> <a href="/pubs/pub50566/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50566/" title="Practical geospatial and sociodemographic predictors of human mobility">Practical geospatial and sociodemographic predictors of human mobility</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span>Corrine W. Ruktanonchai</span><span>, </span> <span>Shengjie Lai</span><span>, </span> <span>Chigozie E. Utazi</span><span>, </span> <span>Alex D. Cunningham</span><span>, </span> <span>Patrycja Koper</span><span>, </span> <span>Grant E. Rogers</span><span>, </span> <span>Nick W. Ruktanonchai</span><span>, </span> <span><a href="/people/AdamSadilek/" title="Adam Sadilek">Adam Sadilek</a></span><span>, </span> <span>Dorothea Woods</span><span>, </span> <span>Andrew J. Tatem</span><span>, </span> <span>Jessica E. Steele</span><span>, </span> <span>Alessandro Sorichetta</span> </p> 
+            <p class="content__venue"><span class="booktitle">Nature Scientific Reports</span> <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50395/" title="FRILL: A Non-Semantic Speech Embedding for Mobile Devices"><span class="hidden-text">FRILL: A Non-Semantic Speech Embedding for Mobile Devices</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>Learned speech representations can drastically improve performance on tasks with limited labeled data. However, due to their size and complexity, learned representations have limited utility in mobile settings where run-time performance can be a significant bottleneck. In this work, we propose a class of lightweight speech embedding models that run efficiently on mobile devices based on the...</p> <a href="/pubs/pub50395/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50395/" title="FRILL: A Non-Semantic Speech Embedding for Mobile Devices">FRILL: A Non-Semantic Speech Embedding for Mobile Devices</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span><a href="/people/105688/" title="Joel Shor">Joel Shor</a></span><span>, </span> <span>Sachin Joglekar</span><span>, </span> <span><a href="/people/107220/" title="Jake Garrison">Jake Garrison</a></span><span>, </span> <span>Shwetak Patel</span> </p> 
+            <p class="content__venue"><span class="booktitle">Interspeech 2021</span> <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50422/" title="Image Translation Network"><span class="hidden-text">Image Translation Network</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>We present an end-to-end neural network to translate images containing text from one language to another. Traditionally, a cascaded approach of optical character recognition (OCR) followed by neural machine translation (NMT) is used to solve this problem. However, the cascaded approach compounds OCR and NMT errors, and incurs longer latency, performs poorly in multiline cases. Our simplified...</p> <a href="/pubs/pub50422/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50422/" title="Image Translation Network">Image Translation Network</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span><a href="/people/105691/" title="Puneet Jain">Puneet Jain</a></span><span>, </span> <span><a href="/people/105696/" title="Orhan Firat">Orhan Firat</a></span><span>, </span> <span>Qi Ge</span><span>, </span> <span>Sihang Liang</span> </p> 
+            <p class="content__venue"><span class="booktitle">Image Translation Model</span> <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item "> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50489/" title="Spatial Intention Maps for Multi-Agent Mobile Manipulation"><span class="hidden-text">Spatial Intention Maps for Multi-Agent Mobile Manipulation</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>The ability to communicate intention enables decentralized multi-agent robots to collaborate while performing physical tasks. In this work, we present spatial intention maps, a new intention representation for multi-agent vision-based deep reinforcement learning that improves coordination between decentralized mobile manipulators. In this representation, each agent's intention is provided to...</p> <a href="/pubs/pub50489/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50489/" title="Spatial Intention Maps for Multi-Agent Mobile Manipulation">Spatial Intention Maps for Multi-Agent Mobile Manipulation</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span>Jimmy Wu</span><span>, </span> <span>Xingyuan Sun</span><span>, </span> <span><a href="/people/AndyZeng/" title="Andy Zeng">Andy Zeng</a></span><span>, </span> <span>Shuran Song</span><span>, </span> <span>Szymon Rusinkiewicz</span><span>, </span> <span><a href="/people/ThomasFunkhouser/" title="Tom Funkhouser">Tom Funkhouser</a></span> </p> 
+            <p class="content__venue"><span class="booktitle">IEEE International Conference on Robotics and Automation (ICRA)</span> <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__item last"> 
+         <div class="card card--publication  card--publication-list card--no-link" data-card-type="list"> <a class="card__link" href="/pubs/pub50592/" title="How Might We Create Better Benchmarks for Speech Recognition?"><span class="hidden-text">How Might We Create Better Benchmarks for Speech Recognition?</span></a> 
+          <div class="card__image"></div> 
+          <div class="card__link--icon card__link--icon-abstract" ng-controller="AbstractPreviewController as AbstractPreviewCtrl" data-card-abstract> <a class="icon icon--info card__link-info" ng-click="AbstractPreviewCtrl.open($event)"></a> 
+           <div class="card__link-tooltip">
+            Preview Abstract
+           </div> 
+           <div class="card__link-abstract t--card-description"> <a ng-click="AbstractPreviewCtrl.close($event)" class="icon icon--close card__link-abstract-close"></a> 
+            <p>The applications of automatic speech recognition (ASR) systems are proliferating, in part due to recent significant quality improvements. However, as recent work indicates, even state-of-the-art speech recognition systems – some which deliver impressive benchmark results, struggle to generalize across use cases. We review relevant work, and, hoping to inform future benchmark development,...</p> <a href="/pubs/pub50592/">View details</a> 
+           </div> 
+          </div> 
+          <div class="content card__content "> 
+           <div class="content__title"> <a class="card__title" href="/pubs/pub50592/" title="How Might We Create Better Benchmarks for Speech Recognition?">How Might We Create Better Benchmarks for Speech Recognition?</a> 
+           </div> 
+           <div class="content__body"> 
+            <p class="content__authors"> <span><a href="/people/107050/" title="Alëna Aksënova">Alëna Aksënova</a></span><span>, </span> <span><a href="/people/DaanvanEsch/" title="Daan van Esch">Daan van Esch</a></span><span>, </span> <span>James Flynn</span><span>, </span> <span>Pavel Golik</span> </p> 
+            <p class="content__venue"><span class="booktitle">ACL-IJCNLP 2021 Workshop on Benchmarking: Past, Present and Future</span> <span class="year">(2021)</span></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="gallery__ctas"> <a class="button  " href="/pubs/"> See our publications </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="copy copy--side   has-grey-background"> 
+    <div class="copy__wrapper"> 
+     <h2 class="copy__title">Teams &amp; people</h2> 
+     <div class="content     "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <div class="content__subtitle">
+          Meet the people behind our innovation 
+        </div> 
+       </div> 
+       <div class="content__body"> 
+        <p>Our teams advance the state of the art through research, systems engineering, and collaboration across Google.</p> 
+       </div> 
+      </div> 
+      <div class="content__ctas"> <a class="button  " href="/teams/"> See our teams </a> <a class="button  " href="/people/"> See our people </a> 
+      </div> 
+     </div> 
+    </div> 
+   </section>
+   <section class="copy copy--side teams-people  "> 
+    <div class="copy__wrapper"> 
+     <h2 class="copy__title">Join us</h2> 
+     <div class="content     "> 
+      <div class="content__text"> 
+       <div class="content__header"> 
+        <div class="content__subtitle">
+          We're always looking for more talented, passionate people 
+        </div> 
+       </div> 
+       <div class="content__body"> 
+        <p>Our global reach means that research teams across the company tackle tough problems together.</p> 
+       </div> 
+      </div> 
+      <div class="content__ctas"> <a class="button  " href="/careers/"> Explore opportunities </a> <a class="button  " href="/outreach/"> Explore our outreach programs </a> 
+      </div> 
+     </div> 
+     <div class="copy__background" data-ng-lazy-background="/static/images/research/join-us/world-map-mobile-2689e4037f423158370e80d6791fffe6c302181a3a5d64d93882e1324375805c.svg"></div> 
+    </div> 
+   </section> 
+  </main> 
+  <footer> <a href="https://www.google.com" target="_blank" aria-label="Google" class="footer__logo"> <img src="/static/images/google_lockup_grey-c55a858d36d74fd790953e6d5cbab45ac99bd5bd8c2b764768258ec732ad42ad.svg" alt="Google"> </a> 
+   <div class="footer__links"> <a href="https://policies.google.com/privacy" target="_blank" class="footer__link">Privacy</a> <a href="https://policies.google.com/terms" target="_blank" class="footer__link">Terms</a> <a href="https://about.google/" target="_blank" class="footer__link">About Google</a> <a href="https://about.google/intl/en/products/" target="_blank" class="footer__link">Google Products</a> 
+   </div> 
+   <div class="footer__tertiary"> <a href="" class="footer__link footer__link--support" onclick="sendFeedback()"> Feedback </a> 
+   </div> 
+   <script>
+    function sendFeedback() {
+      var config = {
+        'productId': '5137383',
+        'bucket': 'site',
+        'allowNonLoggedInFeedback' : true
+      };
+      userfeedback.api.startFeedback(config);
+    }
+  </script> 
+  </footer> 
+  <div id="breakpoints"></div> 
+  <script src="/js/main_min_js.js"></script>  
+ </body>
+</html>

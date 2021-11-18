@@ -23,7 +23,7 @@ import java.util.Set;
 
 //import searchEngine.Indexer.Tuple;
 
-public class Searcher <E> {
+public class Searcher {
 	List<String> stopwords = Arrays.asList("a", "able", "about",
 			"across", "after", "all", "almost", "also", "am", "among", "an",
 			"and", "any", "are", "as", "at", "be", "because", "been", "but",
@@ -133,9 +133,9 @@ public class Searcher <E> {
 	}
 	
 	public static void start() throws IOException {
-		Searcher<?> srch = new Searcher();
+		Searcher srch = new Searcher();
 //		spellCheck spellCheck = new spellCheck();
-		File wholeFolder = new File("ConvertedText");
+		File wholeFolder = new File("Textfiles");
 	    File[] List_Of_Files = wholeFolder.listFiles();
 	    Scanner s = new Scanner(System.in);
 
@@ -145,7 +145,9 @@ public class Searcher <E> {
 	    int check =1;
 	    while(check==1) {
 	    	System.out.println("Enter the word you want to search");
-	    	String str = s.nextLine();
+	    	Scanner sc = new Scanner(System.in);
+	    	String str = sc.nextLine();
+	    	sc.close();
 	    
 	    	String[] al = str.split(" ");
 	    	Set<String> answer = new HashSet<String>();
