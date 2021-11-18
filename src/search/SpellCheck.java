@@ -11,7 +11,7 @@ public class SpellCheck {
 	private static ArrayList<String> createDict(){
 		ArrayList<String> arr = new ArrayList<String>();
 		try {
-	            BufferedReader br =  new BufferedReader(new FileReader("src/Dictionary.txt/"));
+	            BufferedReader br =  new BufferedReader(new FileReader("Dictionary.txt"));
 	            String line = br.readLine();
 	            while (line != null) {
 	                arr.add(line);

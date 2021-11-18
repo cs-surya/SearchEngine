@@ -158,7 +158,11 @@ public class Searcher {
 
 	    	else {
 				System.out.println("Results not Found for : " + str);
-//				spellCheck.check(str);
+			
+			if(!SpellCheck.check(str)) {
+				System.out.println("Did you mean?");
+			System.out.println(SpellCheck.correction(str).toString());
+			}
 			}
 	    	try {
 				 ArrayList<String> autoSuggestedWords = AutoSuggestion.startSuggestion(str);
