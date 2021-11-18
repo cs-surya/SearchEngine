@@ -146,6 +146,11 @@ public class Searcher {
 	    	String str = sc.nextLine();
 	    
 	    	String[] al = str.split(" ");
+	    	if(al.length>1) 
+	    	{
+				System.out.print("You cannot search more than one word at once.\n");
+				continue;
+	    	}
 	    	Set<String> answer = new HashSet<String>();
 	    	answer = srch.search(Arrays.asList(al));
 
