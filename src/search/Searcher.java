@@ -87,12 +87,22 @@ public class Searcher {
 
 	public static void start() throws IOException {
 		try {
+			Scanner input = new Scanner(System.in);
 			while (true) {
-				@SuppressWarnings("resource")
-				Scanner input = new Scanner(System.in);
 				System.out.println("Enter your search word:");
 				String word = input.nextLine();
-
+				String[] al = word.split(" ");
+				if (al.length>1)
+				{
+					System.out.println("You cannot search more than one word at once.\n");
+					continue;
+				}
+				else if (word.isEmpty())
+				{	
+					System.out.println("Search cannot be empty");
+					continue;
+				}
+					
 				ArrayList<String> autoSuglist = AutoSuggestion.startSuggestion(word);
 				if (autoSuglist.contains(word)) {
 					autoSuglist.remove(word);
@@ -134,7 +144,13 @@ public class Searcher {
 						System.out.println("You can also search for: " + spellList.toString());
 					}
 				}
+				System.out.println("\nEnter Y to continue or enter N to exit");
+				String response = input.nextLine();
+				if(response == null || response.equalsIgnoreCase("N")) {
+					break;
+				}	    	
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
