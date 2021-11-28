@@ -24,6 +24,7 @@ public class SpellCheck {
 		return arr;
 	}
 
+	//Edit Distance Algorithm used
 	public static ArrayList<String> correction(String word) {
 		ArrayList<String> wordCorrection = new ArrayList<String>();
 		try {
@@ -31,11 +32,11 @@ public class SpellCheck {
 			int i = 0;
 			int d = 0;
 			ar = createDict();
-
+		
 			if (!ar.contains(word)) {
 
 				for (i = 0; i < ar.size(); i++) {
-					d = Sequences.editDistance(word, ar.get(i));
+					d = Sequences.editDistance(word, ar.get(i)); //Find the difference in distance between the words
 					if (d == 1) {
 						wordCorrection.add(ar.get(i));
 					}

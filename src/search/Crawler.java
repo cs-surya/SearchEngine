@@ -35,10 +35,10 @@ public class Crawler {
 	}
 
 	private static void crawl(int level, String url) {
-		if (level <= Constants.CRAWLING_DEPTH) {
+		if (level <= Constants.CRAWLING_DEPTH) {  //layers of web pages crawled
 			Document doc = requestPage(url);
 			if (doc != null) {
-				HTMLToText.writeHTMLDocument(doc); // Save HTML
+				HTMLToText.writeHTMLDocument(doc); // Save HTML Pages
 				for (Element link : doc.select("a[href]")) {
 					String next_link = link.absUrl("href");
 					if (!visitedURL.contains(next_link) && filterURL(next_link)) {
