@@ -54,16 +54,17 @@ public class Searcher {
 		File[] files = folder.listFiles();
 
 		for (File file : files) {
+			String fileName = file.getName();
 			TST<Integer> tst = new TST<Integer>();
-			tst = Searcher.getTST(file.getName());
+			tst = Searcher.getTST(fileName);
 			int counter = 0;
 
 			if (tst.contains(word)) {
 				int count = tst.get(word);
-				counter = counter + count;
+				counter += count;
 			}
 
-			freqList.put(file.getName(), counter);
+			freqList.put(fileName, counter);
 		}
 
 		Integer valueToBeRemoved = 0;
@@ -132,7 +133,8 @@ public class Searcher {
 					System.out.println("----------------------------------------");
 					
 					for (int i = 0; i < list.size(); i++) {
-						System.out.println((i + 1) + ". " + list.get(i) + System.lineSeparator());
+						String[] temp = list.get(i).toString().split("=");
+						System.out.println((i + 1) + ". " + temp[0] + " - " + temp[1] + " occurences" + System.lineSeparator());
 					}
 					
 					//Auto Suggestion
